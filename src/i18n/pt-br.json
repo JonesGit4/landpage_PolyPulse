@@ -1,0 +1,151 @@
+{
+  "nav": {
+    "features": "Funcionalidades",
+    "bots": "Bots",
+    "performance": "Performance",
+    "pricing": "Planos",
+    "faq": "FAQ",
+    "getStarted": "Comece Grátis",
+    "language": "Idioma"
+  },
+  "hero": {
+    "badge": "500+ Traders Ativos",
+    "headline": "Bots inteligentes para",
+    "headlineHighlight": "Polymarket",
+    "subheadline": "Lucre no piloto automático.",
+    "description": "Sinais automatizados, alertas e bots de trading — rodando 24/7 pra você não precisar fazer nada.",
+    "cta1": "Comece Grátis",
+    "cta2": "Ver Planos",
+    "stats": {
+      "volume": "R$10M+",
+      "volumeLabel": "Volume Operado",
+      "winrate": "89%",
+      "winrateLabel": "Taxa de Acerto",
+      "uptime": "99.9%",
+      "uptimeLabel": "Uptime"
+    }
+  },
+  "howItWorks": {
+    "title": "Como Funciona",
+    "subtitle": "Comece a operar em 3 passos simples",
+    "step1": { "title": "Escolha", "desc": "Selecione seu bot ou plano de acordo com seu estilo de trading e objetivos." },
+    "step2": { "title": "Configure", "desc": "Configure em menos de 2 minutos. Conecte sua wallet e personalize os alertas." },
+    "step3": { "title": "Lucre", "desc": "Receba sinais e opere 24/7 — totalmente automatizado, sempre ligado." }
+  },
+  "bots": {
+    "title": "Nossos Bots",
+    "subtitle": "Ferramentas poderosas pra cada estratégia",
+    "scalper": { "name": "Bot Scalper", "desc": "Trades ultrarrápidos em movimentos de curto prazo. Ideal pra lucros rápidos.", "badge": "+32% ROI" },
+    "swing": { "name": "Bot Swing", "desc": "Captura tendências de médio prazo com pontos de entrada e saída inteligentes.", "badge": "+58% ROI" },
+    "alerts": { "name": "Bot Alertas", "desc": "Notificações em tempo real de movimentos de baleias, mudanças de odds e novos mercados.", "badge": "24/7" },
+    "signals": { "name": "Sinais VIP", "desc": "Picks de alta convicção dos nossos modelos de IA e equipe de analistas.", "badge": "Premium" },
+    "learnMore": "Saiba Mais"
+  },
+  "performance": {
+    "title": "Performance ao Vivo",
+    "subtitle": "Resultados reais, dados em tempo real",
+    "winRate": "Taxa de Acerto",
+    "totalTrades": "Total de Trades",
+    "avgROI": "ROI Médio",
+    "profitFactor": "Fator de Lucro",
+    "recentTrades": "Trades Recentes",
+    "market": "Mercado",
+    "direction": "Direção",
+    "entry": "Entrada",
+    "exit": "Saída",
+    "pnl": "P&L"
+  },
+  "telegram": {
+    "title": "Opere pelo Telegram",
+    "subtitle": "Todo o poder, direto no seu bolso",
+    "feature1": "Sinais em tempo real com entrada/saída",
+    "feature2": "Copie os melhores traders",
+    "feature3": "Acompanhamento de portfólio e P&L",
+    "joinChannel": "Entrar no Canal Grátis"
+  },
+  "testimonials": {
+    "title": "Aprovado por Traders",
+    "subtitle": "O que nossa comunidade fala",
+    "t1": { "name": "Alex M.", "role": "Trader Crypto", "text": "Os sinais do PolyPulse são incrivelmente precisos. Paguei minha assinatura na primeira semana." },
+    "t2": { "name": "Sarah K.", "role": "Investidora DeFi", "text": "O Bot Scalper roda 24/7 e eu só confiro os lucros. Mudou meu jogo total." },
+    "t3": { "name": "Carlos R.", "role": "Pro em Prediction Markets", "text": "Melhor ferramenta de Polymarket que já usei. A integração com Telegram é perfeita." }
+  },
+  "pricing": {
+    "title": "Escolha Seu Plano",
+    "subtitle": "Comece grátis, escale quando quiser",
+    "monthly": "Mensal",
+    "annual": "Anual",
+    "annualSave": "Economize 20%",
+    "currency": "BRL",
+    "currencySymbol": "R$",
+    "free": {
+      "name": "Grátis",
+      "price": "0",
+      "period": "/mês",
+      "desc": "Comece com o básico",
+      "features": ["Acesso ao canal público", "1 sinal/dia", "Grupo da comunidade", "Resumo do mercado"],
+      "cta": "Comece Grátis"
+    },
+    "pro": {
+      "name": "Pro",
+      "price": "269",
+      "period": "/mês",
+      "desc": "Pra traders ativos",
+      "features": ["Tudo do Grátis", "5 sinais/dia", "1 bot incluso", "Acesso grupo VIP", "Suporte 12h", "Dashboard de performance"],
+      "cta": "Assinar Pro",
+      "popular": true
+    },
+    "premium": {
+      "name": "Premium",
+      "price": "539",
+      "period": "/mês",
+      "desc": "Performance máxima",
+      "features": ["Tudo do Pro", "Sinais ilimitados", "3 bots inclusos", "Suporte 24/7 prioritário", "Alertas personalizados", "Analytics avançado"],
+      "cta": "Assinar Premium"
+    },
+    "vip": {
+      "name": "VIP",
+      "price": "869",
+      "period": "/mês",
+      "desc": "Arsenal completo",
+      "features": ["Tudo do Premium", "Todos os bots inclusos", "Configuração 1:1", "Desenvolvimento de bot custom", "Gerente de conta dedicado", "Acesso antecipado a novidades"],
+      "cta": "Assinar VIP"
+    },
+    "elite": {
+      "name": "Elite",
+      "price": "Sob consulta",
+      "period": "",
+      "desc": "Soluções enterprise e sob medida",
+      "features": ["Tudo do VIP", "Desenvolvimento de bot sob medida", "Acesso API", "Opções white-label", "Infraestrutura dedicada", "Garantia SLA"],
+      "cta": "Fale Conosco"
+    },
+    "acceptedPayments": "Formas de pagamento aceitas",
+    "guarantee": "Garantia de 7 dias — seu dinheiro de volta"
+  },
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "q1": { "q": "O que é o PolyPulse?", "a": "O PolyPulse é uma plataforma de bots de trading inteligentes, sinais e alertas para mercados de previsão na Polymarket. Nossas ferramentas te ajudam a operar melhor, 24/7." },
+    "q2": { "q": "Preciso ter experiência em trading?", "a": "Não! Nossos bots fazem o trading por você. O plano Grátis te permite aprender com sinais antes de investir. Também temos tutoriais no YouTube." },
+    "q3": { "q": "Como funcionam os bots?", "a": "Nossos bots se conectam à Polymarket via API, analisando mercados em tempo real. Eles executam trades baseados em estratégias comprovadas — scalping, swing trading ou sinais." },
+    "q4": { "q": "Meu dinheiro tá seguro?", "a": "Sim. A gente nunca custodia seus fundos. Os bots operam com suas próprias chaves de wallet. Sempre auto-custódia." },
+    "q5": { "q": "Posso cancelar quando quiser?", "a": "Com certeza. Cancele quando quiser sem multa. A gente ainda oferece garantia de 7 dias em todos os planos pagos." },
+    "q6": { "q": "Quais plataformas vocês suportam?", "a": "Atualmente Polymarket. Suporte pra Kalshi e DraftKings Predictions em breve." }
+  },
+  "footer": {
+    "tagline": "Bots inteligentes para mercados de previsão.",
+    "product": "Produto",
+    "resources": "Recursos",
+    "legal": "Legal",
+    "newsletter": "Receba sinais grátis por email",
+    "emailPlaceholder": "seu@email.com",
+    "subscribe": "Assinar",
+    "terms": "Termos de Uso",
+    "privacy": "Política de Privacidade",
+    "disclaimer": "Aviso Legal",
+    "docs": "Documentação",
+    "blog": "Blog",
+    "tutorials": "Tutoriais",
+    "copyright": "© 2026 PolyPulse. Todos os direitos reservados.",
+    "risk": "Trading envolve risco. Performance passada não garante resultados futuros."
+  }
+}
