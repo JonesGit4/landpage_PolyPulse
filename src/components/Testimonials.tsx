@@ -1,3 +1,5 @@
+import Container from './Container';
+
 interface TestimonialsProps { dict: any; }
 
 export default function Testimonials({ dict }: TestimonialsProps) {
@@ -10,12 +12,11 @@ export default function Testimonials({ dict }: TestimonialsProps) {
   return (
     <section className="py-28 relative">
       <div className="section-divider mb-28" />
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+      <Container>
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white mb-4">{dict.testimonials.title}</h2>
           <p className="text-gray-400 text-lg font-light">{dict.testimonials.subtitle}</p>
         </div>
-
         <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
             <div key={i} className="card-base card-shine p-7 group">
@@ -37,17 +38,14 @@ export default function Testimonials({ dict }: TestimonialsProps) {
             </div>
           ))}
         </div>
-
-        {/* Social proof bar */}
         <div className="mt-14 flex flex-wrap items-center justify-center gap-8">
           {['98% Uptime', '$2M+ Volume', '24/7 Support', '500+ Traders'].map((stat, i) => (
             <div key={i} className="flex items-center gap-2 text-sm text-gray-500">
-              <div className="w-1.5 h-1.5 rounded-full bg-primary/40" />
-              {stat}
+              <div className="w-1.5 h-1.5 rounded-full bg-primary/40" />{stat}
             </div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

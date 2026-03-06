@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Container from './Container';
 
 interface PricingProps { dict: any; }
 
@@ -35,30 +36,18 @@ export default function Pricing({ dict }: PricingProps) {
   return (
     <section id="pricing" className="py-28 relative">
       <div className="section-divider mb-28" />
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+      <Container>
         <div className="text-center mb-14">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white mb-4">{p.title}</h2>
           <p className="text-gray-400 text-lg mb-10 font-light">{p.subtitle}</p>
-
-          {/* Toggle */}
           <div className="inline-flex items-center gap-1 bg-dark-800 rounded-full p-1 border border-white/[0.08]">
-            <button
-              onClick={() => setAnnual(false)}
-              className={`px-5 py-2.5 rounded-full text-sm transition-all duration-300 ${!annual ? 'bg-primary text-dark-900 font-bold shadow-[0_0_15px_rgba(0,212,255,0.3)]' : 'text-gray-400 hover:text-white'}`}
-            >
-              {p.monthly}
-            </button>
-            <button
-              onClick={() => setAnnual(true)}
-              className={`px-5 py-2.5 rounded-full text-sm transition-all duration-300 flex items-center gap-2 ${annual ? 'bg-primary text-dark-900 font-bold shadow-[0_0_15px_rgba(0,212,255,0.3)]' : 'text-gray-400 hover:text-white'}`}
-            >
-              {p.annual}
-              <span className="text-[10px] bg-secondary/20 text-secondary px-2 py-0.5 rounded-full font-bold">{p.annualSave}</span>
+            <button onClick={() => setAnnual(false)} className={`px-5 py-2.5 rounded-full text-sm transition-all duration-300 ${!annual ? 'bg-primary text-dark-900 font-bold shadow-[0_0_15px_rgba(0,212,255,0.3)]' : 'text-gray-400 hover:text-white'}`}>{p.monthly}</button>
+            <button onClick={() => setAnnual(true)} className={`px-5 py-2.5 rounded-full text-sm transition-all duration-300 flex items-center gap-2 ${annual ? 'bg-primary text-dark-900 font-bold shadow-[0_0_15px_rgba(0,212,255,0.3)]' : 'text-gray-400 hover:text-white'}`}>
+              {p.annual}<span className="text-[10px] bg-secondary/20 text-secondary px-2 py-0.5 rounded-full font-bold">{p.annualSave}</span>
             </button>
           </div>
         </div>
 
-        {/* Pricing cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {tiers.map((tier, i) => (
             <div key={i} className={`group relative card-base card-shine p-6 transition-all duration-400 hover:-translate-y-2 hover:scale-[1.02] ${tierGlow[i]}`}>
@@ -67,41 +56,26 @@ export default function Pricing({ dict }: PricingProps) {
                   <span className="bg-primary text-dark-900 text-[10px] font-bold px-3.5 py-1 rounded-full uppercase tracking-wider shadow-[0_0_15px_rgba(0,212,255,0.3)]">⭐ Popular</span>
                 </div>
               )}
-
               <div className="relative z-10 text-center">
                 <span className="text-2xl mb-3 block">{tierIcons[i]}</span>
                 <h3 className="text-lg font-heading font-bold text-white">{tier.name}</h3>
                 <p className="text-[11px] text-gray-500 mt-1 mb-5 uppercase tracking-wider">{tier.desc}</p>
-
                 <div className="mb-6">
                   {tier.price !== 'Custom' && tier.price !== 'Sob consulta' ? (
-                    <>
-                      <span className="text-4xl font-heading font-extrabold text-white">{sym}{getPrice(tier)}</span>
-                      <span className="text-gray-500 text-sm ml-0.5">{tier.period}</span>
-                    </>
-                  ) : (
-                    <span className="text-2xl font-heading font-bold gradient-text">{tier.price}</span>
-                  )}
+                    <><span className="text-4xl font-heading font-extrabold text-white">{sym}{getPrice(tier)}</span><span className="text-gray-500 text-sm ml-0.5">{tier.period}</span></>
+                  ) : (<span className="text-2xl font-heading font-bold gradient-text">{tier.price}</span>)}
                 </div>
-
                 <ul className="space-y-3 mb-7 text-left">
                   {tier.features.map((f: string, j: number) => (
-                    <li key={j} className="flex items-start gap-2.5 text-[13px] text-gray-400">
-                      <span className="text-primary mt-0.5 flex-shrink-0 text-xs">✓</span>
-                      <span className="font-light">{f}</span>
-                    </li>
+                    <li key={j} className="flex items-start gap-2.5 text-[13px] text-gray-400"><span className="text-primary mt-0.5 flex-shrink-0 text-xs">✓</span><span className="font-light">{f}</span></li>
                   ))}
                 </ul>
-
-                <button className={`w-full py-3 rounded-full text-sm transition-all duration-300 ${tierCtaStyle[i]}`}>
-                  {tier.cta}
-                </button>
+                <button className={`w-full py-3 rounded-full text-sm transition-all duration-300 ${tierCtaStyle[i]}`}>{tier.cta}</button>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Payment methods */}
         <div className="text-center mt-14">
           <p className="text-gray-500 text-xs uppercase tracking-widest mb-4">{p.acceptedPayments}</p>
           <div className="flex items-center justify-center gap-3 flex-wrap">
@@ -122,7 +96,7 @@ export default function Pricing({ dict }: PricingProps) {
           </div>
           <p className="text-xs text-gray-600 mt-4">🛡️ {p.guarantee}</p>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

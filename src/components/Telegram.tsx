@@ -1,12 +1,13 @@
+import Container from './Container';
+
 interface TelegramProps { dict: any; }
 
 export default function Telegram({ dict }: TelegramProps) {
   return (
     <section className="py-28 relative">
       <div className="section-divider mb-28" />
-      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
+      <Container>
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left: Text */}
           <div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white mb-5">{dict.telegram.title}</h2>
             <p className="text-gray-400 text-lg mb-10 font-light leading-relaxed">{dict.telegram.subtitle}</p>
@@ -25,19 +26,12 @@ export default function Telegram({ dict }: TelegramProps) {
               {dict.telegram.joinChannel}
             </a>
           </div>
-
-          {/* Right: Telegram phone mockup */}
           <div className="relative flex justify-center">
             <div className="card-base p-4 max-w-[320px] w-full neon-border">
-              {/* Phone header */}
               <div className="bg-[#0088cc] rounded-t-xl px-4 py-3 flex items-center gap-3">
                 <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center text-sm">⚡</div>
-                <div>
-                  <div className="text-white text-sm font-semibold">PolyPulse Signals</div>
-                  <div className="text-white/60 text-xs">1,247 subscribers</div>
-                </div>
+                <div><div className="text-white text-sm font-semibold">PolyPulse Signals</div><div className="text-white/60 text-xs">1,247 subscribers</div></div>
               </div>
-              {/* Messages */}
               <div className="bg-[#0e1621] rounded-b-xl p-3 space-y-3">
                 <div className="bg-[#182533] rounded-xl p-3.5">
                   <div className="text-xs text-[#0088cc] font-semibold mb-1.5">🔔 NEW SIGNAL</div>
@@ -47,8 +41,8 @@ export default function Telegram({ dict }: TelegramProps) {
                 </div>
                 <div className="bg-[#182533] rounded-xl p-3.5">
                   <div className="text-xs text-yellow-400 font-semibold mb-1.5">🐋 WHALE ALERT</div>
-                  <div className="text-sm text-white">$45,000 position opened on &quot;NBA MVP&quot;</div>
-                  <div className="text-xs text-gray-400 mt-1">Smart money moving — Jokic 33%→38%</div>
+                  <div className="text-sm text-white">$45,000 position on &quot;NBA MVP&quot;</div>
+                  <div className="text-xs text-gray-400 mt-1">Smart money — Jokic 33%→38%</div>
                 </div>
                 <div className="bg-[#182533] rounded-xl p-3.5">
                   <div className="text-xs text-secondary font-semibold mb-1.5">✅ TRADE CLOSED</div>
@@ -57,8 +51,6 @@ export default function Telegram({ dict }: TelegramProps) {
                 </div>
               </div>
             </div>
-
-            {/* Floating badges */}
             <div className="absolute -top-3 -right-3 card-base px-4 py-3 shadow-xl animate-float hidden lg:block">
               <div className="text-[11px] text-gray-500 uppercase tracking-wider">Today&#39;s P&amp;L</div>
               <div className="text-xl font-heading font-bold text-secondary">+$1,240</div>
@@ -69,7 +61,7 @@ export default function Telegram({ dict }: TelegramProps) {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }
