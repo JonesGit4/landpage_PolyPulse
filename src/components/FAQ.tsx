@@ -8,33 +8,34 @@ export default function FAQ({ dict }: FAQProps) {
   const faqs = [dict.faq.q1, dict.faq.q2, dict.faq.q3, dict.faq.q4, dict.faq.q5, dict.faq.q6];
 
   return (
-    <section id="faq" className="py-24 relative">
-      <div className="section-divider mb-24" />
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="py-28 relative">
+      <div className="section-divider mb-28" />
+      <div className="max-w-3xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">{dict.faq.title}</h2>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white mb-4">{dict.faq.title}</h2>
         </div>
 
         <div className="space-y-3">
           {faqs.map((faq, i) => (
-            <div key={i} className="bg-dark-800 rounded-xl border border-white/5 overflow-hidden">
+            <div key={i} className="card-base overflow-hidden group">
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-white/[0.02] transition-colors"
+                className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-white/[0.02] transition-colors"
               >
-                <span className="text-white font-medium text-sm pr-4">{faq.q}</span>
+                <span className="text-white font-medium text-[15px] pr-6">{faq.q}</span>
                 <svg
-                  width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
-                  className={`text-primary flex-shrink-0 transition-transform ${openIndex === i ? 'rotate-180' : ''}`}
+                  width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+                  className={`text-primary flex-shrink-0 transition-transform duration-300 ${openIndex === i ? 'rotate-180' : ''}`}
+                  viewBox="0 0 24 24"
                 >
                   <polyline points="6 9 12 15 18 9" />
                 </svg>
               </button>
-              {openIndex === i && (
-                <div className="px-6 pb-4">
-                  <p className="text-gray-400 text-sm leading-relaxed">{faq.a}</p>
+              <div className={`overflow-hidden transition-all duration-300 ${openIndex === i ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
+                <div className="px-6 pb-5">
+                  <p className="text-gray-400 text-sm leading-relaxed font-light">{faq.a}</p>
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>

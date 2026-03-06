@@ -17,53 +17,53 @@ export default function Performance({ dict }: PerformanceProps) {
   ];
 
   return (
-    <section id="performance" className="py-24 relative">
-      <div className="section-divider mb-24" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="performance" className="py-28 relative">
+      <div className="section-divider mb-28" />
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 mb-4">
             <div className="live-dot" />
-            <span className="text-sm text-secondary font-medium">LIVE</span>
+            <span className="text-sm text-secondary font-mono font-medium tracking-wide">LIVE</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">{dict.performance.title}</h2>
-          <p className="text-gray-400 text-lg">{dict.performance.subtitle}</p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white mb-4">{dict.performance.title}</h2>
+          <p className="text-gray-400 text-lg font-light">{dict.performance.subtitle}</p>
         </div>
 
         {/* Metrics cards */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
           {metrics.map((m, i) => (
-            <div key={i} className="bg-dark-800 rounded-xl border border-white/5 p-6 text-center neon-border">
-              <div className={`text-3xl font-heading font-bold ${m.color}`}>{m.value}</div>
-              <div className="text-sm text-gray-500 mt-1">{m.label}</div>
+            <div key={i} className="card-base card-shine p-6 text-center">
+              <div className={`text-3xl lg:text-4xl font-heading font-bold ${m.color} mb-1`}>{m.value}</div>
+              <div className="text-xs text-gray-500 uppercase tracking-widest">{m.label}</div>
             </div>
           ))}
         </div>
 
         {/* Trades table */}
-        <div className="bg-dark-800 rounded-2xl border border-white/10 overflow-hidden neon-border">
+        <div className="card-base overflow-hidden neon-border mb-8">
           <div className="px-6 py-4 border-b border-white/5 flex items-center justify-between">
-            <h3 className="font-heading font-semibold text-white">{dict.performance.recentTrades}</h3>
-            <div className="flex items-center gap-1.5"><div className="live-dot" /><span className="text-xs text-secondary">LIVE</span></div>
+            <h3 className="font-heading font-semibold text-white text-sm">{dict.performance.recentTrades}</h3>
+            <div className="flex items-center gap-1.5"><div className="live-dot" /><span className="text-xs text-secondary font-mono">LIVE</span></div>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
-                <tr className="text-xs text-gray-500 uppercase border-b border-white/5">
-                  <th className="px-6 py-3 text-left">{dict.performance.market}</th>
-                  <th className="px-4 py-3 text-center">{dict.performance.direction}</th>
-                  <th className="px-4 py-3 text-right">{dict.performance.entry}</th>
-                  <th className="px-4 py-3 text-right">{dict.performance.exit}</th>
-                  <th className="px-6 py-3 text-right">{dict.performance.pnl}</th>
+                <tr className="text-[11px] text-gray-500 uppercase tracking-widest border-b border-white/5">
+                  <th className="px-6 py-3 text-left font-medium">{dict.performance.market}</th>
+                  <th className="px-4 py-3 text-center font-medium">{dict.performance.direction}</th>
+                  <th className="px-4 py-3 text-right font-medium">{dict.performance.entry}</th>
+                  <th className="px-4 py-3 text-right font-medium">{dict.performance.exit}</th>
+                  <th className="px-6 py-3 text-right font-medium">{dict.performance.pnl}</th>
                 </tr>
               </thead>
               <tbody>
                 {trades.map((t, i) => (
                   <tr key={i} className="border-b border-white/[0.03] hover:bg-white/[0.02] transition-colors">
-                    <td className="px-6 py-3.5 text-sm text-gray-300">{t.market}</td>
-                    <td className={`px-4 py-3.5 text-sm text-center font-bold ${t.dirColor}`}>{t.dir}</td>
-                    <td className="px-4 py-3.5 text-sm text-gray-400 text-right font-mono">{t.entry}</td>
-                    <td className="px-4 py-3.5 text-sm text-gray-400 text-right font-mono">{t.exit}</td>
-                    <td className={`px-6 py-3.5 text-sm text-right font-bold font-mono ${t.pnlColor}`}>{t.pnl}</td>
+                    <td className="px-6 py-4 text-sm text-gray-300 font-medium">{t.market}</td>
+                    <td className={`px-4 py-4 text-sm text-center font-bold ${t.dirColor}`}>{t.dir}</td>
+                    <td className="px-4 py-4 text-sm text-gray-400 text-right font-mono">{t.entry}</td>
+                    <td className="px-4 py-4 text-sm text-gray-400 text-right font-mono">{t.exit}</td>
+                    <td className={`px-6 py-4 text-sm text-right font-bold font-mono ${t.pnlColor}`}>{t.pnl}</td>
                   </tr>
                 ))}
               </tbody>
@@ -71,22 +71,21 @@ export default function Performance({ dict }: PerformanceProps) {
           </div>
         </div>
 
-        {/* Chart mockup placeholder */}
-        <div className="mt-8 bg-dark-800 rounded-2xl border border-white/10 p-8 neon-border">
+        {/* Chart */}
+        <div className="card-base p-6 sm:p-8 neon-border">
           <div className="flex items-center justify-between mb-6">
-            <span className="text-sm text-gray-400">Cumulative P&L — Last 30 Days</span>
-            <span className="text-sm text-secondary font-bold">+$12,450</span>
+            <span className="text-sm text-gray-400 font-light">Cumulative P&amp;L — Last 30 Days</span>
+            <span className="text-sm text-secondary font-heading font-bold">+$12,450</span>
           </div>
-          {/* SVG chart mockup */}
-          <svg viewBox="0 0 800 200" className="w-full h-40">
+          <svg viewBox="0 0 800 180" className="w-full h-36">
             <defs>
               <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#00D4FF" stopOpacity="0.3" />
+                <stop offset="0%" stopColor="#00D4FF" stopOpacity="0.25" />
                 <stop offset="100%" stopColor="#00D4FF" stopOpacity="0" />
               </linearGradient>
             </defs>
-            <path d="M0,180 Q50,170 100,160 T200,140 T300,120 T400,100 T500,80 T600,60 T700,40 T800,20" stroke="#00D4FF" strokeWidth="2" fill="none" />
-            <path d="M0,180 Q50,170 100,160 T200,140 T300,120 T400,100 T500,80 T600,60 T700,40 T800,20 L800,200 L0,200 Z" fill="url(#chartGrad)" />
+            <path d="M0,160 C40,155 80,150 120,140 S200,120 240,110 S320,95 360,85 S440,70 480,60 S560,50 600,40 S680,28 720,22 S780,15 800,10" stroke="#00D4FF" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+            <path d="M0,160 C40,155 80,150 120,140 S200,120 240,110 S320,95 360,85 S440,70 480,60 S560,50 600,40 S680,28 720,22 S780,15 800,10 L800,180 L0,180 Z" fill="url(#chartGrad)" />
           </svg>
         </div>
       </div>
