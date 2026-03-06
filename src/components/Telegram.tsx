@@ -7,9 +7,9 @@ export default function Telegram({ dict }: TelegramProps) {
     <section className="py-28 relative">
       <div className="section-divider mb-28" />
       <Container>
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white mb-5">{dict.telegram.title}</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-[2.8rem] font-heading font-bold text-white mb-5 leading-tight">{dict.telegram.title}</h2>
             <p className="text-gray-400 text-lg mb-10 font-light leading-relaxed">{dict.telegram.subtitle}</p>
             <ul className="space-y-5 mb-10">
               {[dict.telegram.feature1, dict.telegram.feature2, dict.telegram.feature3].map((f, i) => (
@@ -26,8 +26,8 @@ export default function Telegram({ dict }: TelegramProps) {
               {dict.telegram.joinChannel}
             </a>
           </div>
-          <div className="relative flex justify-center">
-            <div className="card-base p-4 max-w-[320px] w-full neon-border">
+          <div className="flex justify-center">
+            <div className="card-base p-4 w-full max-w-[340px] neon-border">
               <div className="bg-[#0088cc] rounded-t-xl px-4 py-3 flex items-center gap-3">
                 <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center text-sm">⚡</div>
                 <div><div className="text-white text-sm font-semibold">PolyPulse Signals</div><div className="text-white/60 text-xs">1,247 subscribers</div></div>
@@ -50,14 +50,16 @@ export default function Telegram({ dict }: TelegramProps) {
                   <div className="text-xs text-gray-400 mt-1">Held for 2h 14m</div>
                 </div>
               </div>
-            </div>
-            <div className="absolute -top-3 -right-3 card-base px-4 py-3 shadow-xl animate-float hidden lg:block">
-              <div className="text-[11px] text-gray-500 uppercase tracking-wider">Today&#39;s P&amp;L</div>
-              <div className="text-xl font-heading font-bold text-secondary">+$1,240</div>
-            </div>
-            <div className="absolute -bottom-3 -left-3 card-base px-4 py-3 shadow-xl animate-float hidden lg:block" style={{ animationDelay: '3s' }}>
-              <div className="text-[11px] text-gray-500 uppercase tracking-wider">Active Bots</div>
-              <div className="text-xl font-heading font-bold text-primary">3 running</div>
+              <div className="grid grid-cols-2 gap-3 mt-3">
+                <div className="card-base px-3 py-2 text-center">
+                  <div className="text-[10px] text-gray-500 uppercase tracking-wider">Today P&amp;L</div>
+                  <div className="text-base font-heading font-bold text-secondary">+$1,240</div>
+                </div>
+                <div className="card-base px-3 py-2 text-center">
+                  <div className="text-[10px] text-gray-500 uppercase tracking-wider">Active Bots</div>
+                  <div className="text-base font-heading font-bold text-primary">3 running</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -11,11 +11,11 @@ export default function Pricing({ dict }: PricingProps) {
 
   const tiers = [p.free, p.pro, p.premium, p.vip, p.elite];
   const tierGlow = [
-    'hover:border-gray-500/30 hover:shadow-[0_10px_40px_rgba(100,100,100,0.1)]',
-    'hover:border-primary/40 hover:shadow-[0_10px_40px_rgba(0,212,255,0.15)]',
-    'hover:border-accent/40 hover:shadow-[0_10px_40px_rgba(139,92,246,0.15)]',
-    'hover:border-yellow-500/40 hover:shadow-[0_10px_40px_rgba(234,179,8,0.15)]',
-    'hover:border-white/20 hover:shadow-[0_10px_40px_rgba(255,255,255,0.05)]',
+    'hover:border-gray-500/30',
+    'hover:border-primary/40 hover:shadow-[0_10px_40px_rgba(0,212,255,0.12)]',
+    'hover:border-accent/40 hover:shadow-[0_10px_40px_rgba(139,92,246,0.12)]',
+    'hover:border-yellow-500/40 hover:shadow-[0_10px_40px_rgba(234,179,8,0.12)]',
+    'hover:border-white/20',
   ];
   const tierCtaStyle = [
     'border border-gray-600 text-gray-300 hover:bg-white/5',
@@ -48,9 +48,10 @@ export default function Pricing({ dict }: PricingProps) {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-          {tiers.map((tier, i) => (
-            <div key={i} className={`group relative card-base card-shine p-6 transition-all duration-400 hover:-translate-y-2 hover:scale-[1.02] ${tierGlow[i]}`}>
+        {/* Top row: 3 main plans */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
+          {tiers.slice(0, 3).map((tier, i) => (
+            <div key={i} className={`group relative card-base card-shine p-7 transition-all duration-400 hover:-translate-y-2 ${tierGlow[i]}`}>
               {tier.popular && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20">
                   <span className="bg-primary text-dark-900 text-[10px] font-bold px-3.5 py-1 rounded-full uppercase tracking-wider shadow-[0_0_15px_rgba(0,212,255,0.3)]">⭐ Popular</span>
@@ -58,22 +59,50 @@ export default function Pricing({ dict }: PricingProps) {
               )}
               <div className="relative z-10 text-center">
                 <span className="text-2xl mb-3 block">{tierIcons[i]}</span>
-                <h3 className="text-lg font-heading font-bold text-white">{tier.name}</h3>
+                <h3 className="text-xl font-heading font-bold text-white">{tier.name}</h3>
                 <p className="text-[11px] text-gray-500 mt-1 mb-5 uppercase tracking-wider">{tier.desc}</p>
                 <div className="mb-6">
-                  {tier.price !== 'Custom' && tier.price !== 'Sob consulta' ? (
-                    <><span className="text-4xl font-heading font-extrabold text-white">{sym}{getPrice(tier)}</span><span className="text-gray-500 text-sm ml-0.5">{tier.period}</span></>
-                  ) : (<span className="text-2xl font-heading font-bold gradient-text">{tier.price}</span>)}
+                  <span className="text-4xl font-heading font-extrabold text-white">{sym}{getPrice(tier)}</span>
+                  <span className="text-gray-500 text-sm ml-0.5">{tier.period}</span>
                 </div>
                 <ul className="space-y-3 mb-7 text-left">
                   {tier.features.map((f: string, j: number) => (
-                    <li key={j} className="flex items-start gap-2.5 text-[13px] text-gray-400"><span className="text-primary mt-0.5 flex-shrink-0 text-xs">✓</span><span className="font-light">{f}</span></li>
+                    <li key={j} className="flex items-start gap-2.5 text-sm text-gray-400"><span className="text-primary mt-0.5 flex-shrink-0 text-xs">✓</span><span className="font-light">{f}</span></li>
                   ))}
                 </ul>
                 <button className={`w-full py-3 rounded-full text-sm transition-all duration-300 ${tierCtaStyle[i]}`}>{tier.cta}</button>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Bottom row: VIP + Elite */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {tiers.slice(3).map((tier, idx) => {
+            const i = idx + 3;
+            return (
+              <div key={i} className={`group relative card-base card-shine p-7 transition-all duration-400 hover:-translate-y-2 ${tierGlow[i]}`}>
+                <div className="relative z-10 flex flex-col md:flex-row md:items-start gap-6">
+                  <div className="flex-1 text-center md:text-left">
+                    <span className="text-2xl mb-3 block">{tierIcons[i]}</span>
+                    <h3 className="text-xl font-heading font-bold text-white">{tier.name}</h3>
+                    <p className="text-[11px] text-gray-500 mt-1 mb-4 uppercase tracking-wider">{tier.desc}</p>
+                    <div className="mb-4">
+                      {tier.price !== 'Custom' && tier.price !== 'Sob consulta' ? (
+                        <><span className="text-4xl font-heading font-extrabold text-white">{sym}{getPrice(tier)}</span><span className="text-gray-500 text-sm ml-0.5">{tier.period}</span></>
+                      ) : (<span className="text-2xl font-heading font-bold gradient-text">{tier.price}</span>)}
+                    </div>
+                    <button className={`px-8 py-3 rounded-full text-sm transition-all duration-300 ${tierCtaStyle[i]}`}>{tier.cta}</button>
+                  </div>
+                  <ul className="space-y-2.5 flex-1">
+                    {tier.features.map((f: string, j: number) => (
+                      <li key={j} className="flex items-start gap-2.5 text-sm text-gray-400"><span className="text-primary mt-0.5 flex-shrink-0 text-xs">✓</span><span className="font-light">{f}</span></li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            );
+          })}
         </div>
 
         <div className="text-center mt-14">

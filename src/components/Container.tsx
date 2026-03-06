@@ -9,10 +9,13 @@ export default function Container({ children, className = '', narrow = false }: 
     <div
       className={className}
       style={{
-        maxWidth: narrow ? '768px' : '1100px',
-        margin: '0 auto',
-        paddingLeft: '48px',
-        paddingRight: '48px',
+        width: '100%',
+        maxWidth: narrow ? '768px' : '1060px',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        paddingLeft: '40px',
+        paddingRight: '40px',
+        boxSizing: 'border-box' as const,
       }}
     >
       {children}
