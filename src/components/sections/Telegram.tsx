@@ -1,7 +1,6 @@
 'use client';
-import { Check, Send } from 'lucide-react';
+import { Send, CheckCircle } from 'lucide-react';
 import Container from '@/components/layout/Container';
-import SectionHeader from '@/components/ui/SectionHeader';
 import Button from '@/components/ui/Button';
 import { useInView } from '@/hooks/useInView';
 import type { Dictionary } from '@/i18n/types';
@@ -10,80 +9,89 @@ interface TelegramProps { dict: Dictionary; }
 
 export default function Telegram({ dict }: TelegramProps) {
   const { ref, isVisible } = useInView();
-  const features = [dict.telegram.feature1, dict.telegram.feature2, dict.telegram.feature3];
+  const d = dict.telegram;
 
   return (
-    <section className="py-24 lg:py-28 relative">
-      <div className="section-line mb-24" />
+    <section className="py-32 lg:py-40 relative">
       <Container>
-        <div ref={ref} className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          {/* Left: Text */}
+        <div ref={ref} className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          {/* Left — Text */}
           <div className={`in-view ${isVisible ? 'visible' : ''}`}>
-            <h2 className="text-3xl sm:text-4xl lg:text-[2.5rem] font-heading font-bold text-white mb-5 leading-tight">
-              {dict.telegram.title}
+            <span className="section-label">TELEGRAM SIGNALS</span>
+            <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-heading font-bold text-white leading-[1.1] mb-8">
+              {d.title}
             </h2>
-            <p className="text-gray-400 text-lg mb-8 font-light leading-relaxed">
-              {dict.telegram.subtitle}
+            <p className="text-gray-400 text-lg mb-10 font-light leading-relaxed">
+              {d.subtitle}
             </p>
-            <ul className="space-y-4 mb-8">
-              {features.map((f, i) => (
-                <li key={i} className="flex items-center gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0">
-                    <Check size={13} className="text-primary" strokeWidth={2.5} />
-                  </div>
-                  <span className="text-gray-300 font-light text-[15px]">{f}</span>
-                </li>
+
+            <div className="space-y-5 mb-12">
+              {[d.feature1, d.feature2, d.feature3].map((f, i) => (
+                <div key={i} className="flex items-start gap-4">
+                  <CheckCircle className="text-primary mt-0.5 flex-shrink-0" size={20} />
+                  <span className="text-gray-300 text-[15px]">{f}</span>
+                </div>
               ))}
-            </ul>
-            <Button variant="telegram" size="lg" href="#">
-              <Send size={18} />
-              {dict.telegram.joinChannel}
+            </div>
+
+            <Button href="#" variant="telegram" size="lg">
+              <Send size={17} />
+              {d.joinChannel}
             </Button>
           </div>
 
-          {/* Right: Telegram mockup */}
-          <div className={`flex justify-center in-view in-view-delay-2 ${isVisible ? 'visible' : ''}`}>
-            <div className="card p-0 w-full max-w-[340px] overflow-hidden">
+          {/* Right — Telegram Mockup */}
+          <div className={`in-view in-view-delay-2 ${isVisible ? 'visible' : ''}`}>
+            <div className="card p-0 overflow-hidden max-w-md mx-auto lg:mx-0 lg:ml-auto">
               {/* Header */}
-              <div className="bg-[#0088cc] px-4 py-3.5 flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center">
-                  <Zap size={16} className="text-white" />
+              <div className="bg-dark-700 px-6 py-5 flex items-center gap-4 border-b border-white/[0.04]">
+                <div className="w-11 h-11 bg-primary/15 rounded-full flex items-center justify-center">
+                  <Send className="text-primary" size={18} />
                 </div>
                 <div>
-                  <div className="text-white text-sm font-semibold">PolyPulse Signals</div>
-                  <div className="text-white/50 text-xs">1,247 subscribers</div>
+                  <div className="text-white font-semibold text-sm">PolyPulse Signals</div>
+                  <div className="text-gray-500 text-xs">1,247 subscribers</div>
                 </div>
               </div>
 
               {/* Messages */}
-              <div className="bg-dark-900 p-3 space-y-2.5">
-                <div className="bg-dark-800 rounded-xl p-3.5 border border-white/[0.04]">
-                  <div className="text-[11px] text-[#0088cc] font-semibold mb-1.5">🔔 NEW SIGNAL</div>
-                  <div className="text-sm text-white mb-1">📈 <strong>BUY</strong> — Will BTC hit $100K?</div>
-                  <div className="text-xs text-gray-500">Entry: 0.62 | Target: 0.75 | Stop: 0.55</div>
-                  <div className="text-xs text-secondary mt-1.5 font-medium">Confidence: ★★★★★</div>
+              <div className="p-5 space-y-4">
+                {/* Signal message */}
+                <div className="bg-dark-700 rounded-xl p-5 border border-white/[0.04]">
+                  <div className="text-amber-400 text-xs font-bold mb-2.5">🚨 NEW SIGNAL</div>
+                  <div className="text-white font-semibold text-sm mb-1">📈 BUY — Will BTC hit $100K?</div>
+                  <div className="text-gray-500 text-xs leading-relaxed">
+                    Entry: 0.62 | Target: 0.75 | Stop: 0.55
+                  </div>
+                  <div className="text-gray-400 text-xs mt-2">Confidence: ★★★★★</div>
                 </div>
-                <div className="bg-dark-800 rounded-xl p-3.5 border border-white/[0.04]">
-                  <div className="text-[11px] text-amber-400 font-semibold mb-1.5">🐋 WHALE ALERT</div>
-                  <div className="text-sm text-white">$45,000 position on &quot;NBA MVP&quot;</div>
-                  <div className="text-xs text-gray-500 mt-1">Smart money — Jokic 33% → 38%</div>
-                </div>
-                <div className="bg-dark-800 rounded-xl p-3.5 border border-white/[0.04]">
-                  <div className="text-[11px] text-secondary font-semibold mb-1.5">✅ TRADE CLOSED</div>
-                  <div className="text-sm text-white">Iran Supreme Leader — <span className="text-secondary font-bold">+$320 (+18.2%)</span></div>
-                  <div className="text-xs text-gray-500 mt-1">Held for 2h 14m</div>
-                </div>
-              </div>
 
-              {/* Mini stats */}
-              <div className="grid grid-cols-2 gap-2.5 p-3 pt-0">
-                <div className="bg-dark-800 rounded-lg px-3 py-2.5 text-center border border-white/[0.04]">
-                  <div className="text-[10px] text-gray-500 uppercase tracking-wider">Today P&L</div>
-                  <div className="text-sm font-heading font-bold text-secondary">+$1,240</div>
+                {/* Whale alert */}
+                <div className="bg-dark-700 rounded-xl p-5 border border-white/[0.04]">
+                  <div className="text-accent text-xs font-bold mb-2.5">🐋 WHALE ALERT</div>
+                  <div className="text-white text-sm font-semibold mb-1">$45,000 position on &quot;NBA MVP&quot;</div>
+                  <div className="text-gray-500 text-xs">Smart money — Jokic 33% → 38%</div>
                 </div>
-                <div className="bg-dark-800 rounded-lg px-3 py-2.5 text-center border border-white/[0.04]">
-                  <div className="text-[10px] text-gray-500 uppercase tracking-wider">Active Bots</div>
-                  <div className="text-sm font-heading font-bold text-primary">3 running</div>
+
+                {/* Trade closed */}
+                <div className="bg-dark-700 rounded-xl p-5 border border-white/[0.04]">
+                  <div className="text-primary text-xs font-bold mb-2.5">✅ TRADE CLOSED</div>
+                  <div className="text-white text-sm font-semibold">
+                    Iran Supreme Leader — <span className="text-primary">+$320 (+18.2%)</span>
+                  </div>
+                  <div className="text-gray-500 text-xs mt-1">Held for 2h 14m</div>
+                </div>
+
+                {/* Stats bar */}
+                <div className="grid grid-cols-2 gap-3 pt-2">
+                  <div className="text-center bg-dark-800 rounded-xl py-4 border border-white/[0.04]">
+                    <div className="text-[10px] text-gray-500 uppercase tracking-wider mb-1">TODAY P&L</div>
+                    <div className="text-primary font-bold text-lg font-heading">+$1,240</div>
+                  </div>
+                  <div className="text-center bg-dark-800 rounded-xl py-4 border border-white/[0.04]">
+                    <div className="text-[10px] text-gray-500 uppercase tracking-wider mb-1">ACTIVE BOTS</div>
+                    <div className="text-white font-bold text-lg font-heading">3 running</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -91,15 +99,5 @@ export default function Telegram({ dict }: TelegramProps) {
         </div>
       </Container>
     </section>
-  );
-}
-
-// Re-export Zap for the telegram mockup icon
-function Zap(props: React.SVGProps<SVGSVGElement> & { size?: number }) {
-  const { size = 24, ...rest } = props;
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...rest}>
-      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-    </svg>
   );
 }

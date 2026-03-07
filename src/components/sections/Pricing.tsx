@@ -1,149 +1,144 @@
 'use client';
 import { useState } from 'react';
-import { Check, Crown } from 'lucide-react';
+import { Diamond, Zap, Shield, Crown } from 'lucide-react';
 import Container from '@/components/layout/Container';
 import SectionHeader from '@/components/ui/SectionHeader';
+import Button from '@/components/ui/Button';
 import { useInView } from '@/hooks/useInView';
-import type { Dictionary, PricingTier } from '@/i18n/types';
+import type { Dictionary, Locale } from '@/i18n/types';
 
-interface PricingProps { dict: Dictionary; }
+interface PricingProps { dict: Dictionary; locale: Locale; }
 
-const tierStyles = [
-  { border: 'hover:border-gray-500/20', ctaCls: 'border border-white/10 text-gray-300 hover:bg-white/5', icon: '✦' },
-  { border: 'hover:border-primary/30 hover:shadow-[0_8px_32px_rgba(56,189,248,0.1)]', ctaCls: 'bg-gradient-to-r from-primary to-sky-400 text-dark-950 font-bold hover:shadow-[0_0_20px_rgba(56,189,248,0.25)]', icon: '⚡' },
-  { border: 'hover:border-accent/30 hover:shadow-[0_8px_32px_rgba(167,139,250,0.1)]', ctaCls: 'bg-gradient-to-r from-accent to-purple-400 text-white font-bold hover:shadow-[0_0_20px_rgba(167,139,250,0.25)]', icon: '💎' },
-  { border: 'hover:border-amber-500/30 hover:shadow-[0_8px_32px_rgba(245,158,11,0.1)]', ctaCls: 'bg-gradient-to-r from-amber-500 to-orange-400 text-dark-950 font-bold hover:shadow-[0_0_20px_rgba(245,158,11,0.25)]', icon: '👑' },
-];
+const tierIcons = [Diamond, Zap, Shield, Crown];
 
-export default function Pricing({ dict }: PricingProps) {
+export default function Pricing({ dict, locale }: PricingProps) {
   const [annual, setAnnual] = useState(false);
   const { ref, isVisible } = useInView();
-  const p = dict.pricing;
-  const sym = p.currencySymbol;
-  const tiers: PricingTier[] = [p.free, p.pro, p.premium, p.elite];
-
-  function getPrice(tier: PricingTier): string {
-    if (tier.price === '0' || tier.price === 'Custom' || tier.price === 'Sob consulta') return tier.price;
-    const price = parseInt(tier.price);
-    return annual ? String(Math.round(price * 0.8)) : tier.price;
-  }
+  const { ref: eliteRef, isVisible: eliteVis } = useInView();
+  const d = dict.pricing;
+  const tiers = [d.free, d.pro, d.premium];
 
   return (
-    <section id="pricing" className="py-24 lg:py-28 relative">
-      <div className="section-line mb-24" />
+    <section id="pricing" className="py-32 lg:py-40 relative">
       <Container>
-        <SectionHeader title={p.title} subtitle={p.subtitle} />
+        <SectionHeader
+          label="PRICING"
+          title={d.title}
+          subtitle={d.subtitle}
+        />
 
         {/* Toggle */}
-        <div className="flex justify-center mb-12">
-          <div className="inline-flex items-center gap-1 bg-dark-800 rounded-full p-1 border border-white/[0.06]">
-            <button
-              onClick={() => setAnnual(false)}
-              className={`px-5 py-2.5 rounded-full text-sm transition-all duration-300 ${!annual ? 'bg-primary text-dark-950 font-bold' : 'text-gray-400 hover:text-white'}`}
-            >
-              {p.monthly}
-            </button>
-            <button
-              onClick={() => setAnnual(true)}
-              className={`px-5 py-2.5 rounded-full text-sm transition-all duration-300 flex items-center gap-2 ${annual ? 'bg-primary text-dark-950 font-bold' : 'text-gray-400 hover:text-white'}`}
-            >
-              {p.annual}
-              <span className="text-[10px] bg-secondary/20 text-secondary px-2 py-0.5 rounded-full font-bold">{p.annualSave}</span>
-            </button>
-          </div>
+        <div className="flex items-center justify-center gap-4 mb-16">
+          <span className={`text-sm font-medium ${!annual ? 'text-white' : 'text-gray-500'}`}>{d.monthly}</span>
+          <button
+            onClick={() => setAnnual(!annual)}
+            className={`w-14 h-7 rounded-full relative cursor-pointer transition-colors duration-300 ${annual ? 'bg-primary' : 'bg-dark-600'}`}
+          >
+            <div className={`absolute top-1 w-5 h-5 rounded-full bg-white shadow transition-transform duration-300 ${annual ? 'left-8' : 'left-1'}`} />
+          </button>
+          <span className={`text-sm font-medium ${annual ? 'text-white' : 'text-gray-500'}`}>{d.annual}</span>
+          {annual && <span className="text-xs text-primary font-semibold bg-primary/10 px-2.5 py-1 rounded-full">{d.annualSave}</span>}
         </div>
 
-        {/* Plans grid: 3 top + 1 bottom (Elite full width) */}
-        <div ref={ref} className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 mb-4 lg:mb-5">
-          {tiers.slice(0, 3).map((tier, i) => (
-            <div key={i} className={`group relative card p-6 lg:p-7 transition-all duration-300 hover:-translate-y-1 ${tierStyles[i].border} in-view in-view-delay-${i + 1} ${isVisible ? 'visible' : ''}`}>
-              {tier.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                  <span className="bg-primary text-dark-950 text-[10px] font-bold px-3.5 py-1 rounded-full uppercase tracking-wider shadow-[0_0_12px_rgba(56,189,248,0.2)]">
-                    ⭐ Popular
-                  </span>
-                </div>
-              )}
-              <div className="text-center">
-                <span className="text-xl mb-3 block">{tierStyles[i].icon}</span>
-                <h3 className="text-xl font-heading font-bold text-white">{tier.name}</h3>
-                <p className="text-[11px] text-gray-500 mt-1 mb-5 uppercase tracking-wider">{tier.desc}</p>
-                <div className="mb-6">
-                  <span className="text-4xl font-heading font-extrabold text-white">{sym}{getPrice(tier)}</span>
-                  <span className="text-gray-500 text-sm ml-0.5">{tier.period}</span>
-                </div>
-                <ul className="space-y-2.5 mb-7 text-left">
-                  {tier.features.map((f, j) => (
-                    <li key={j} className="flex items-start gap-2.5 text-sm text-gray-400">
-                      <Check size={14} className="text-primary mt-0.5 flex-shrink-0" strokeWidth={2.5} />
-                      <span className="font-light">{f}</span>
-                    </li>
-                  ))}
-                </ul>
-                <button className={`w-full py-3 rounded-xl text-sm transition-all duration-300 cursor-pointer ${tierStyles[i].ctaCls}`}>
-                  {tier.cta}
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Elite tier — full width, horizontal layout */}
-        <div className={`group card p-6 lg:p-8 transition-all duration-300 hover:-translate-y-1 ${tierStyles[3].border} in-view in-view-delay-4 ${isVisible ? 'visible' : ''}`}>
-          <div className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-10">
-            <div className="flex-1 text-center lg:text-left">
-              <div className="flex items-center justify-center lg:justify-start gap-2.5 mb-3">
-                <Crown size={22} className="text-amber-400" />
-                <h3 className="text-xl font-heading font-bold text-white">{tiers[3].name}</h3>
-              </div>
-              <p className="text-sm text-gray-400 mb-4 font-light">{tiers[3].desc}</p>
-              <div className="mb-4">
-                {tiers[3].price !== 'Custom' && tiers[3].price !== 'Sob consulta' ? (
-                  <>
-                    <span className="text-3xl font-heading font-extrabold text-white">{sym}{getPrice(tiers[3])}</span>
-                    <span className="text-gray-500 text-sm ml-0.5">{tiers[3].period}</span>
-                  </>
-                ) : (
-                  <span className="text-2xl font-heading font-bold gradient-text">{tiers[3].price}</span>
+        {/* Tier Grid */}
+        <div ref={ref} className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-10">
+          {tiers.map((tier, i) => {
+            const Icon = tierIcons[i];
+            const isPopular = tier.popular;
+            return (
+              <div
+                key={i}
+                className={`card card-glow p-8 lg:p-10 flex flex-col in-view in-view-delay-${i + 1} ${isVisible ? 'visible' : ''} ${
+                  isPopular ? 'border-primary/25 ring-1 ring-primary/10' : ''
+                }`}
+              >
+                {isPopular && (
+                  <div className="text-[11px] font-mono font-bold text-primary bg-primary/10 border border-primary/20 px-3 py-1.5 rounded-full self-start mb-6 uppercase tracking-wider">
+                    ⚡ POPULAR
+                  </div>
                 )}
+
+                <Icon className="text-primary mb-6" size={28} />
+                <h3 className="text-2xl font-heading font-bold text-white mb-1">{tier.name}</h3>
+                <p className="text-gray-500 text-xs uppercase tracking-wider mb-6">{tier.desc}</p>
+
+                {/* Price */}
+                <div className="flex items-baseline gap-1 mb-8">
+                  <span className="text-4xl lg:text-5xl font-heading font-bold text-white">{tier.price}</span>
+                  <span className="text-gray-500 text-sm">/{tier.period}</span>
+                </div>
+
+                {/* Features */}
+                <div className="space-y-4 mb-10 flex-1">
+                  {tier.features.map((f: string, fi: number) => (
+                    <div key={fi} className="flex items-start gap-3">
+                      <svg className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-gray-400 text-sm">{f}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <Button
+                  href="#"
+                  variant={isPopular ? 'primary' : i === 2 ? 'secondary' : 'ghost'}
+                  size="lg"
+                  className="w-full justify-center"
+                >
+                  {tier.cta}
+                </Button>
               </div>
-              <button className={`px-8 py-3 rounded-xl text-sm transition-all duration-300 cursor-pointer ${tierStyles[3].ctaCls}`}>
-                {tiers[3].cta}
-              </button>
-            </div>
+            );
+          })}
+        </div>
+
+        {/* Elite tier */}
+        <div ref={eliteRef} className={`card p-8 lg:p-10 mb-16 in-view ${eliteVis ? 'visible' : ''}`}>
+          <div className="flex flex-col lg:flex-row lg:items-center gap-8">
             <div className="flex-1">
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                {tiers[3].features.map((f, j) => (
-                  <li key={j} className="flex items-start gap-2.5 text-sm text-gray-400">
-                    <Check size={14} className="text-amber-400 mt-0.5 flex-shrink-0" strokeWidth={2.5} />
-                    <span className="font-light">{f}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="flex items-center gap-3 mb-4">
+                <Crown className="text-amber-400" size={24} />
+                <h3 className="text-2xl font-heading font-bold text-white">{d.elite.name}</h3>
+              </div>
+              <p className="text-gray-400 text-[15px] mb-4 font-light">{d.elite.desc}</p>
+              <div className="text-3xl font-heading font-bold gradient-text mb-1">{d.elite.price}</div>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-x-10 gap-y-3 flex-1">
+              {d.elite.features.map((f: string, i: number) => (
+                <div key={i} className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-gray-400 text-sm">{f}</span>
+                </div>
+              ))}
+            </div>
+            <div className="flex-shrink-0">
+              <Button href="#" variant="outline" size="lg">{d.elite.cta}</Button>
             </div>
           </div>
         </div>
 
-        {/* Payment methods */}
-        <div className="text-center mt-12">
-          <p className="text-gray-500 text-xs uppercase tracking-widest mb-4">{p.acceptedPayments}</p>
-          <div className="flex items-center justify-center gap-2.5 flex-wrap">
-            {p.currency === 'BRL' ? (
+        {/* Payments */}
+        <div className="text-center space-y-3">
+          <div className="text-xs text-gray-500 uppercase tracking-[0.15em] mb-3">{d.acceptedPayments}</div>
+          <div className="flex items-center justify-center gap-6 text-sm text-gray-400">
+            {locale === 'pt-br' ? (
               <>
-                <span className="text-xs bg-dark-800 px-4 py-2 rounded-lg border border-white/[0.06] text-gray-400">💳 Pix</span>
-                <span className="text-xs bg-dark-800 px-4 py-2 rounded-lg border border-white/[0.06] text-gray-400">💳 Cartão</span>
-                <span className="text-xs bg-dark-800 px-4 py-2 rounded-lg border border-white/[0.06] text-gray-400">₿ Crypto</span>
-                <span className="text-xs bg-dark-800 px-4 py-2 rounded-lg border border-white/[0.06] text-gray-400">📱 Boleto</span>
+                <span>💳 Pix</span>
+                <span>💳 Boleto</span>
+                <span>💳 Cartão</span>
               </>
             ) : (
               <>
-                <span className="text-xs bg-dark-800 px-4 py-2 rounded-lg border border-white/[0.06] text-gray-400">💳 Stripe</span>
-                <span className="text-xs bg-dark-800 px-4 py-2 rounded-lg border border-white/[0.06] text-gray-400">₿ Crypto (USDC)</span>
-                <span className="text-xs bg-dark-800 px-4 py-2 rounded-lg border border-white/[0.06] text-gray-400">💳 Card</span>
+                <span>💳 Stripe</span>
+                <span>₿ Crypto (USDC)</span>
+                <span>💳 Card</span>
               </>
             )}
           </div>
-          <p className="text-xs text-gray-600 mt-4">🛡️ {p.guarantee}</p>
+          <p className="text-xs text-gray-500">🛡 {d.guarantee}</p>
         </div>
       </Container>
     </section>

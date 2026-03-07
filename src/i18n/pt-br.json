@@ -27,17 +27,47 @@
     "terminal": {
       "title": "Terminal PolyPulse",
       "trades": [
-        { "time": "15:42:03", "action": "COMPRA", "market": "BTC vai bater $100K em junho?", "odds": "67%", "amount": "$2.450" },
-        { "time": "15:41:58", "action": "VENDA", "market": "Campeão NBA 2026 — OKC Thunder", "odds": "35%", "amount": "$1.200" },
-        { "time": "15:41:45", "action": "COMPRA", "market": "Próximo Líder Supremo do Irã", "odds": "56%", "amount": "$3.100" },
-        { "time": "15:41:32", "action": "COMPRA", "market": "Nomeado Dem 2028 — Newsom", "odds": "25%", "amount": "$890" },
-        { "time": "15:41:21", "action": "ALERTA", "market": "Baleia detectada: posição de $45K", "odds": "—", "amount": "⚡" }
+        {
+          "time": "15:42:03",
+          "action": "COMPRA",
+          "market": "BTC vai bater $100K em junho?",
+          "odds": "67%",
+          "amount": "$2.450"
+        },
+        {
+          "time": "15:41:58",
+          "action": "VENDA",
+          "market": "Campeão NBA 2026 — OKC Thunder",
+          "odds": "35%",
+          "amount": "$1.200"
+        },
+        {
+          "time": "15:41:45",
+          "action": "COMPRA",
+          "market": "Próximo Líder Supremo do Irã",
+          "odds": "56%",
+          "amount": "$3.100"
+        },
+        {
+          "time": "15:41:32",
+          "action": "COMPRA",
+          "market": "Nomeado Dem 2028 — Newsom",
+          "odds": "25%",
+          "amount": "$890"
+        },
+        {
+          "time": "15:41:21",
+          "action": "ALERTA",
+          "market": "Baleia detectada: posição de $45K",
+          "odds": "—",
+          "amount": "⚡"
+        }
       ]
     }
   },
   "howItWorks": {
-    "title": "Como Funciona",
-    "subtitle": "Comece a operar em 3 passos simples",
+    "title": "COMO FUNCIONA",
+    "subtitle": "Deploy em 5 minutos.\nOpere 24/7.",
     "step1": {
       "title": "Escolha Seu Bot",
       "desc": "Escolha seu bot ou plano com base no seu estilo de trading e apetite de risco."
@@ -52,29 +82,56 @@
     }
   },
   "bots": {
-    "title": "Nossos Bots",
-    "subtitle": "Ferramentas poderosas para cada estratégia",
-    "scalper": {
+    "title": "NOSSOS PRODUTOS",
+    "subtitle": "Quatro bots. Uma plataforma.",
+    "bot1": {
       "name": "Scalper Bot",
-      "desc": "Operações ultrarrápidas em movimentos de curto prazo. Ideal para lucros rápidos e consistentes.",
-      "badge": "+32% ROI"
+      "desc": "Operações ultrarrápidas em movimentos de mercado de curto prazo. Feito pra lucros rápidos e consistentes.",
+      "badge": "+32% ROI",
+      "features": [
+        "Execução em frações de segundo",
+        "Controles de risco automatizados",
+        "Escaneamento 24/7",
+        "Estratégia de baixo drawdown"
+      ],
+      "cta": "Saiba mais"
     },
-    "swing": {
+    "bot2": {
       "name": "Swing Bot",
-      "desc": "Captura tendências de médio prazo com pontos de entrada e saída inteligentes.",
-      "badge": "+58% ROI"
+      "desc": "Captura tendências de médio prazo com pontos inteligentes de entrada e saída para movimentos maiores.",
+      "badge": "+58% ROI",
+      "features": [
+        "Detecção de tendências multi-mercado",
+        "Otimização de entrada/saída",
+        "Motor de dimensionamento",
+        "Estratégias backtested"
+      ],
+      "cta": "Saiba mais"
     },
-    "alerts": {
+    "bot3": {
       "name": "Alert Bot",
-      "desc": "Notificações em tempo real de movimentos de baleias, mudanças de odds e novos mercados.",
-      "badge": "24/7"
+      "desc": "Notificações em tempo real pra movimentos de baleias, mudanças de odds e novos mercados.",
+      "badge": "24/7",
+      "features": [
+        "Rastreio de movimentos de baleias",
+        "Detecção de mudanças de odds",
+        "Alertas de novos mercados",
+        "Filtros personalizáveis"
+      ],
+      "cta": "Saiba mais"
     },
-    "signals": {
-      "name": "Sinais VIP",
-      "desc": "Seleções de alta convicção curadas pelos nossos modelos de IA e equipe de analistas.",
-      "badge": "Premium"
-    },
-    "learnMore": "Saiba mais"
+    "bot4": {
+      "name": "VIP Signals",
+      "desc": "Seleções curadas de alta convicção dos nossos modelos de IA e equipe de analistas.",
+      "badge": "PREMIUM",
+      "features": [
+        "Análise com IA",
+        "Curadoria de analistas experts",
+        "Níveis de entrada, alvo e stop",
+        "Relatórios diários de performance"
+      ],
+      "cta": "Saiba mais"
+    }
   },
   "performance": {
     "title": "Performance ao Vivo",
@@ -233,6 +290,7 @@
     "terms": "Termos",
     "privacy": "Privacidade",
     "disclaimer": "Aviso Legal",
-    "risk": "Operar em mercados de predição envolve risco. Resultados passados não garantem resultados futuros. Opere apenas com capital que você pode se dar ao luxo de perder."
+    "risk": "Operar em mercados de predição envolve risco. Resultados passados não garantem resultados futuros. Opere apenas com capital que você pode se dar ao luxo de perder.",
+    "faq": "FAQ"
   }
 }

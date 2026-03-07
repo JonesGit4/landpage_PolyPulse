@@ -25,10 +25,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <Performance dict={dict} />
       <Telegram dict={dict} />
       <Testimonials dict={dict} />
-      <Pricing dict={dict} />
+      <Pricing dict={dict} locale={locale} />
       <FAQ dict={dict} />
       <CTA dict={dict} />
-      <Footer dict={dict} locale={locale} />
+      <Footer dict={dict} />
     </main>
   );
 }

@@ -27,17 +27,47 @@
     "terminal": {
       "title": "PolyPulse Terminal",
       "trades": [
-        { "time": "15:42:03", "action": "BUY", "market": "Will BTC hit $100K by June?", "odds": "67%", "amount": "$2,450" },
-        { "time": "15:41:58", "action": "SELL", "market": "NBA Champion 2026 — OKC Thunder", "odds": "35%", "amount": "$1,200" },
-        { "time": "15:41:45", "action": "BUY", "market": "Next Iran Supreme Leader", "odds": "56%", "amount": "$3,100" },
-        { "time": "15:41:32", "action": "BUY", "market": "Dem Nominee 2028 — Newsom", "odds": "25%", "amount": "$890" },
-        { "time": "15:41:21", "action": "ALERT", "market": "Whale detected: $45K position opened", "odds": "—", "amount": "⚡" }
+        {
+          "time": "15:42:03",
+          "action": "BUY",
+          "market": "Will BTC hit $100K by June?",
+          "odds": "67%",
+          "amount": "$2,450"
+        },
+        {
+          "time": "15:41:58",
+          "action": "SELL",
+          "market": "NBA Champion 2026 — OKC Thunder",
+          "odds": "35%",
+          "amount": "$1,200"
+        },
+        {
+          "time": "15:41:45",
+          "action": "BUY",
+          "market": "Next Iran Supreme Leader",
+          "odds": "56%",
+          "amount": "$3,100"
+        },
+        {
+          "time": "15:41:32",
+          "action": "BUY",
+          "market": "Dem Nominee 2028 — Newsom",
+          "odds": "25%",
+          "amount": "$890"
+        },
+        {
+          "time": "15:41:21",
+          "action": "ALERT",
+          "market": "Whale detected: $45K position opened",
+          "odds": "—",
+          "amount": "⚡"
+        }
       ]
     }
   },
   "howItWorks": {
-    "title": "How It Works",
-    "subtitle": "Start trading in 3 simple steps",
+    "title": "HOW IT WORKS",
+    "subtitle": "Deploy in 5 minutes.\nTrade 24/7.",
     "step1": {
       "title": "Choose Your Bot",
       "desc": "Pick your bot or plan based on your trading style and risk appetite."
@@ -52,29 +82,56 @@
     }
   },
   "bots": {
-    "title": "Our Bots",
-    "subtitle": "Powerful tools for every trading strategy",
-    "scalper": {
+    "title": "OUR PRODUCTS",
+    "subtitle": "Four bots. One platform.",
+    "bot1": {
       "name": "Scalper Bot",
-      "desc": "Lightning-fast trades on short-term market movements. Ideal for quick, consistent profits.",
-      "badge": "+32% ROI"
+      "desc": "Lightning-fast trades on short-term market movements. Built for quick, consistent profits with tight risk management.",
+      "badge": "+32% ROI",
+      "features": [
+        "Sub-second execution speed",
+        "Automated risk controls",
+        "24/7 market scanning",
+        "Low-drawdown strategy"
+      ],
+      "cta": "Learn more"
     },
-    "swing": {
+    "bot2": {
       "name": "Swing Bot",
-      "desc": "Captures medium-term trends with smart entry and exit points for larger moves.",
-      "badge": "+58% ROI"
+      "desc": "Captures medium-term trends with smart entry and exit points. Ideal for larger, sustained moves across markets.",
+      "badge": "+58% ROI",
+      "features": [
+        "Multi-market trend detection",
+        "Smart entry/exit optimization",
+        "Position sizing engine",
+        "Backtested strategies"
+      ],
+      "cta": "Learn more"
     },
-    "alerts": {
+    "bot3": {
       "name": "Alert Bot",
-      "desc": "Real-time notifications for whale moves, odds shifts, and new market openings.",
-      "badge": "24/7"
+      "desc": "Real-time notifications for whale moves, odds shifts, and new market openings. Never miss a trading opportunity.",
+      "badge": "24/7",
+      "features": [
+        "Whale movement tracking",
+        "Odds shift detection",
+        "New market alerts",
+        "Customizable filters"
+      ],
+      "cta": "Learn more"
     },
-    "signals": {
+    "bot4": {
       "name": "VIP Signals",
-      "desc": "Curated high-conviction picks from our AI models and analyst team.",
-      "badge": "Premium"
-    },
-    "learnMore": "Learn more"
+      "desc": "Curated high-conviction picks from our AI models and analyst team. Premium insights for serious traders.",
+      "badge": "PREMIUM",
+      "features": [
+        "AI-powered analysis",
+        "Expert analyst curation",
+        "Entry, target & stop levels",
+        "Daily performance reports"
+      ],
+      "cta": "Learn more"
+    }
   },
   "performance": {
     "title": "Live Performance",
@@ -233,6 +290,7 @@
     "terms": "Terms",
     "privacy": "Privacy",
     "disclaimer": "Disclaimer",
-    "risk": "Trading prediction markets involves risk. Past performance does not guarantee future results. Only trade with capital you can afford to lose."
+    "risk": "Trading prediction markets involves risk. Past performance does not guarantee future results. Only trade with capital you can afford to lose.",
+    "faq": "FAQ"
   }
 }

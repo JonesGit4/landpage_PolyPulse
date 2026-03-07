@@ -2,28 +2,28 @@
 import { useInView } from '@/hooks/useInView';
 
 interface SectionHeaderProps {
+  label?: string;
   title: string;
   subtitle?: string;
-  badge?: { text: string; live?: boolean };
+  centered?: boolean;
   className?: string;
 }
 
-export default function SectionHeader({ title, subtitle, badge, className = '' }: SectionHeaderProps) {
+export default function SectionHeader({ label, title, subtitle, centered = true, className = '' }: SectionHeaderProps) {
   const { ref, isVisible } = useInView();
 
   return (
-    <div ref={ref} className={`text-center mb-14 lg:mb-16 ${className}`}>
-      {badge && (
-        <div className={`inline-flex items-center gap-2 mb-5 in-view ${isVisible ? 'visible' : ''}`}>
-          {badge.live && <div className="live-dot" />}
-          <span className="text-sm text-secondary font-mono font-medium tracking-wide">{badge.text}</span>
-        </div>
+    <div ref={ref} className={`${centered ? 'text-center' : ''} mb-20 lg:mb-24 ${className}`}>
+      {label && (
+        <span className={`section-label in-view ${isVisible ? 'visible' : ''}`}>
+          {label}
+        </span>
       )}
-      <h2 className={`text-3xl sm:text-4xl lg:text-[2.75rem] font-heading font-bold text-white mb-4 in-view ${isVisible ? 'visible' : ''}`}>
+      <h2 className={`text-4xl sm:text-5xl lg:text-[3.5rem] font-heading font-bold text-white leading-[1.1] mb-6 in-view ${isVisible ? 'visible' : ''}`}>
         {title}
       </h2>
       {subtitle && (
-        <p className={`text-gray-400 text-lg max-w-2xl mx-auto font-light leading-relaxed in-view in-view-delay-1 ${isVisible ? 'visible' : ''}`}>
+        <p className={`text-gray-400 text-lg sm:text-xl max-w-2xl ${centered ? 'mx-auto' : ''} font-light leading-relaxed in-view in-view-delay-1 ${isVisible ? 'visible' : ''}`}>
           {subtitle}
         </p>
       )}

@@ -27,17 +27,47 @@
     "terminal": {
       "title": "Terminal PolyPulse",
       "trades": [
-        { "time": "15:42:03", "action": "COMPRA", "market": "¿BTC superará $100K en junio?", "odds": "67%", "amount": "$2,450" },
-        { "time": "15:41:58", "action": "VENTA", "market": "Campeón NBA 2026 — OKC Thunder", "odds": "35%", "amount": "$1,200" },
-        { "time": "15:41:45", "action": "COMPRA", "market": "Próximo Líder Supremo de Irán", "odds": "56%", "amount": "$3,100" },
-        { "time": "15:41:32", "action": "COMPRA", "market": "Nominado Dem 2028 — Newsom", "odds": "25%", "amount": "$890" },
-        { "time": "15:41:21", "action": "ALERTA", "market": "Ballena detectada: posición de $45K", "odds": "—", "amount": "⚡" }
+        {
+          "time": "15:42:03",
+          "action": "COMPRA",
+          "market": "¿BTC superará $100K en junio?",
+          "odds": "67%",
+          "amount": "$2,450"
+        },
+        {
+          "time": "15:41:58",
+          "action": "VENTA",
+          "market": "Campeón NBA 2026 — OKC Thunder",
+          "odds": "35%",
+          "amount": "$1,200"
+        },
+        {
+          "time": "15:41:45",
+          "action": "COMPRA",
+          "market": "Próximo Líder Supremo de Irán",
+          "odds": "56%",
+          "amount": "$3,100"
+        },
+        {
+          "time": "15:41:32",
+          "action": "COMPRA",
+          "market": "Nominado Dem 2028 — Newsom",
+          "odds": "25%",
+          "amount": "$890"
+        },
+        {
+          "time": "15:41:21",
+          "action": "ALERTA",
+          "market": "Ballena detectada: posición de $45K",
+          "odds": "—",
+          "amount": "⚡"
+        }
       ]
     }
   },
   "howItWorks": {
-    "title": "Cómo Funciona",
-    "subtitle": "Empieza a operar en 3 simples pasos",
+    "title": "CÓMO FUNCIONA",
+    "subtitle": "Despliega en 5 minutos.\nOpera 24/7.",
     "step1": {
       "title": "Elige Tu Bot",
       "desc": "Selecciona tu bot o plan según tu estilo de trading y apetito de riesgo."
@@ -52,29 +82,56 @@
     }
   },
   "bots": {
-    "title": "Nuestros Bots",
-    "subtitle": "Herramientas poderosas para cada estrategia",
-    "scalper": {
+    "title": "NUESTROS PRODUCTOS",
+    "subtitle": "Cuatro bots. Una plataforma.",
+    "bot1": {
       "name": "Scalper Bot",
-      "desc": "Operaciones ultrarrápidas en movimientos a corto plazo. Ideal para ganancias rápidas y consistentes.",
-      "badge": "+32% ROI"
+      "desc": "Operaciones ultrarrápidas en movimientos de mercado a corto plazo. Diseñado para ganancias rápidas y consistentes.",
+      "badge": "+32% ROI",
+      "features": [
+        "Ejecución en fracciones de segundo",
+        "Controles de riesgo automatizados",
+        "Escaneo de mercado 24/7",
+        "Estrategia de bajo drawdown"
+      ],
+      "cta": "Más información"
     },
-    "swing": {
+    "bot2": {
       "name": "Swing Bot",
-      "desc": "Captura tendencias a medio plazo con puntos de entrada y salida inteligentes.",
-      "badge": "+58% ROI"
+      "desc": "Captura tendencias a medio plazo con puntos de entrada y salida inteligentes para movimientos más amplios.",
+      "badge": "+58% ROI",
+      "features": [
+        "Detección de tendencias multi-mercado",
+        "Optimización de entrada/salida",
+        "Motor de dimensionamiento",
+        "Estrategias backtested"
+      ],
+      "cta": "Más información"
     },
-    "alerts": {
+    "bot3": {
       "name": "Alert Bot",
-      "desc": "Notificaciones en tiempo real de movimientos de ballenas, cambios de cuotas y nuevos mercados.",
-      "badge": "24/7"
+      "desc": "Notificaciones en tiempo real para movimientos de ballenas, cambios de probabilidad y nuevos mercados.",
+      "badge": "24/7",
+      "features": [
+        "Rastreo de movimientos de ballenas",
+        "Detección de cambios de probabilidad",
+        "Alertas de nuevos mercados",
+        "Filtros personalizables"
+      ],
+      "cta": "Más información"
     },
-    "signals": {
-      "name": "Señales VIP",
-      "desc": "Selecciones de alta convicción curadas por nuestros modelos de IA y equipo de analistas.",
-      "badge": "Premium"
-    },
-    "learnMore": "Saber más"
+    "bot4": {
+      "name": "VIP Signals",
+      "desc": "Selecciones curadas de alta convicción de nuestros modelos de IA y equipo de analistas.",
+      "badge": "PREMIUM",
+      "features": [
+        "Análisis con IA",
+        "Curación de analistas expertos",
+        "Niveles de entrada, objetivo y stop",
+        "Informes diarios de rendimiento"
+      ],
+      "cta": "Más información"
+    }
   },
   "performance": {
     "title": "Rendimiento en Vivo",
@@ -233,6 +290,7 @@
     "terms": "Términos",
     "privacy": "Privacidad",
     "disclaimer": "Aviso Legal",
-    "risk": "Operar en mercados de predicción implica riesgo. Los resultados pasados no garantizan resultados futuros. Opera solo con capital que puedas permitirte perder."
+    "risk": "Operar en mercados de predicción implica riesgo. Los resultados pasados no garantizan resultados futuros. Opera solo con capital que puedas permitirte perder.",
+    "faq": "FAQ"
   }
 }

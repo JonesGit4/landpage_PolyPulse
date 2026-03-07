@@ -49,16 +49,17 @@ export interface BotDict {
   name: string;
   desc: string;
   badge: string;
+  features?: string[];
+  cta: string;
 }
 
 export interface BotsDict {
   title: string;
   subtitle: string;
-  scalper: BotDict;
-  swing: BotDict;
-  alerts: BotDict;
-  signals: BotDict;
-  learnMore: string;
+  bot1: BotDict;
+  bot2: BotDict;
+  bot3: BotDict;
+  bot4: BotDict;
 }
 
 export interface PerformanceDict {
@@ -147,6 +148,7 @@ export interface FooterDict {
   docs: string;
   blog: string;
   tutorials: string;
+  faq: string;
   newsletter: string;
   emailPlaceholder: string;
   subscribe: string;
@@ -176,3 +178,5 @@ export interface Dictionary {
   footer: FooterDict;
   cta: CTADict;
 }
+
+export type Locale = "en" | "es" | "pt-br";
