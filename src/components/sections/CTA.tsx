@@ -12,7 +12,7 @@ export default function CTA({ dict }: CTAProps) {
   const d = dict.cta;
 
   return (
-    <section className="py-32 lg:py-40 relative">
+    <section className="pt-16 pb-32 lg:pt-20 lg:pb-40 relative border-t border-white/[0.03]">
       <Container narrow>
         <div ref={ref} className="text-center">
           <h2 className={`text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-white leading-[1.1] mb-6 in-view ${isVisible ? 'visible' : ''}`}>
