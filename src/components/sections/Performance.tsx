@@ -38,7 +38,7 @@ export default function Performance({ dict }: PerformanceProps) {
         />
 
         {/* Metrics Grid */}
-        <div ref={metricsRef} className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-24">
+        <div ref={metricsRef} className="grid grid-cols-2 md:grid-cols-4 gap-6" style={{ marginBottom: '6rem' }}>
           {metrics.map((m, i) => (
             <div key={i} className={`card text-center p-8 lg:p-10 in-view in-view-delay-${i + 1} ${metricsVis ? 'visible' : ''}`}>
               <div className={`text-4xl lg:text-5xl font-heading font-bold mb-3 ${m.color}`}>{m.value}</div>
@@ -48,7 +48,7 @@ export default function Performance({ dict }: PerformanceProps) {
         </div>
 
         {/* Trades Table */}
-        <div ref={tableRef} className={`card overflow-hidden mb-12 in-view ${tableVis ? 'visible' : ''}`}>
+        <div ref={tableRef} className={`card overflow-hidden in-view ${tableVis ? 'visible' : ''}`} style={{ marginBottom: '4rem' }}>
           <div className="flex items-center justify-between px-6 lg:px-8 py-5 border-b border-white/[0.04]">
             <span className="text-sm font-heading font-semibold text-white">{d.recentTrades}</span>
             <div className="flex items-center gap-2">

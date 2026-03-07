@@ -21,7 +21,7 @@ export default function FAQ({ dict }: FAQProps) {
           label="FAQ"
           title={d.title}
         />
-        <div ref={ref} className="space-y-3">
+        <div ref={ref} className="space-y-4">
           {items.map((item, i) => (
             <div
               key={i}

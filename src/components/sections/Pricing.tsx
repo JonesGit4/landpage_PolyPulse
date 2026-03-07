@@ -41,7 +41,7 @@ export default function Pricing({ dict, locale }: PricingProps) {
         </div>
 
         {/* Tier Grid */}
-        <div ref={ref} className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-20">
+        <div ref={ref} className="grid md:grid-cols-3 gap-6 lg:gap-8" style={{ marginBottom: '5rem' }}>
           {tiers.map((tier, i) => {
             const Icon = tierIcons[i];
             const isPopular = tier.popular;
@@ -94,7 +94,7 @@ export default function Pricing({ dict, locale }: PricingProps) {
         </div>
 
         {/* Elite tier */}
-        <div ref={eliteRef} className={`card p-8 lg:p-10 mb-20 in-view ${eliteVis ? 'visible' : ''}`}>
+        <div ref={eliteRef} className={`card p-8 lg:p-10 in-view ${eliteVis ? 'visible' : ''}`} style={{ marginBottom: '5rem' }}>
           <div className="flex flex-col lg:flex-row lg:items-center gap-8">
             <div className="flex-1">
               <div className="flex items-center gap-3 mb-4">
