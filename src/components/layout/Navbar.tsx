@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { Activity, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 import Container from './Container';
 import type { Dictionary, Locale } from '@/i18n/types';
 
@@ -37,10 +38,8 @@ export default function Navbar({ dict, locale }: NavbarProps) {
       <Container>
         <div className="flex items-center justify-between h-18">
           {/* Logo */}
-          <a href={`/${locale}`} className="flex items-center gap-2.5 group">
-            <div className="w-9 h-9 bg-primary/15 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-              <Activity className="text-primary" size={18} />
-            </div>
+          <a href={`/${locale}`} className="flex items-center gap-2 group">
+            <Image src="/logo.png" alt="PolyPulse" width={36} height={36} className="rounded-lg" />
             <span className="text-lg font-heading font-bold text-white">
               Poly<span className="text-primary">Pulse</span>
             </span>

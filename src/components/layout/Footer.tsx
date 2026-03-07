@@ -1,5 +1,6 @@
 'use client';
-import { Activity, Send } from 'lucide-react';
+import { Send } from 'lucide-react';
+import Image from 'next/image';
 import Container from './Container';
 import type { Dictionary } from '@/i18n/types';
 
@@ -14,10 +15,8 @@ export default function Footer({ dict }: FooterProps) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-16">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2.5 mb-5">
-              <div className="w-8 h-8 bg-primary/15 rounded-lg flex items-center justify-center">
-                <Activity className="text-primary" size={16} />
-              </div>
+            <div className="flex items-center gap-2 mb-5">
+              <Image src="/logo.png" alt="PolyPulse" width={32} height={32} className="rounded-lg" />
               <span className="text-lg font-heading font-bold text-white">
                 Poly<span className="text-primary">Pulse</span>
               </span>
