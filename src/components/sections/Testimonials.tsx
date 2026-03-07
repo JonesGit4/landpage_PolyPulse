@@ -23,7 +23,7 @@ export default function Testimonials({ dict }: TestimonialsProps) {
         />
         <div ref={ref} className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-20">
           {testimonials.map((t, i) => (
-            <div key={i} className={`card card-glow p-8 lg:p-10 in-view in-view-delay-${i + 1} ${isVisible ? 'visible' : ''}`}>
+            <div key={i} className={`card card-glow p-8 lg:p-10 text-center in-view in-view-delay-${i + 1} ${isVisible ? 'visible' : ''}`}>
               {/* Stars */}
               <div className="text-amber-400 text-lg mb-6">★★★★★</div>
 
@@ -33,7 +33,7 @@ export default function Testimonials({ dict }: TestimonialsProps) {
               </p>
 
               {/* Author */}
-              <div className="flex items-center gap-4 mt-auto">
+              <div className="flex items-center justify-center gap-4 mt-auto">
                 <div className={`w-11 h-11 rounded-full flex items-center justify-center text-sm font-bold ${avatarColors[i]}`}>
                   {t.name.split(' ').map((n: string) => n[0]).join('')}
                 </div>

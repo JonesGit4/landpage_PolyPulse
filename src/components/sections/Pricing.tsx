@@ -48,12 +48,12 @@ export default function Pricing({ dict, locale }: PricingProps) {
             return (
               <div
                 key={i}
-                className={`card card-glow p-8 lg:p-10 flex flex-col in-view in-view-delay-${i + 1} ${isVisible ? 'visible' : ''} ${
+                className={`card card-glow p-8 lg:p-10 flex flex-col text-center items-center in-view in-view-delay-${i + 1} ${isVisible ? 'visible' : ''} ${
                   isPopular ? 'border-primary/25 ring-1 ring-primary/10' : ''
                 }`}
               >
                 {isPopular && (
-                  <div className="text-[11px] font-mono font-bold text-primary bg-primary/10 border border-primary/20 px-3 py-1.5 rounded-full self-start mb-6 uppercase tracking-wider">
+                  <div className="text-[11px] font-mono font-bold text-primary bg-primary/10 border border-primary/20 px-3 py-1.5 rounded-full mb-6 uppercase tracking-wider">
                     ⚡ POPULAR
                   </div>
                 )}
@@ -69,7 +69,7 @@ export default function Pricing({ dict, locale }: PricingProps) {
                 </div>
 
                 {/* Features */}
-                <div className="space-y-4 mb-10 flex-1">
+                <div className="space-y-4 mb-10 flex-1 text-left self-stretch">
                   {tier.features.map((f: string, fi: number) => (
                     <div key={fi} className="flex items-start gap-3">
                       <svg className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -30,9 +30,9 @@ export default function Bots({ dict }: BotsProps) {
           {bots.map((bot, i) => {
             const Icon = botIcons[i];
             return (
-              <div key={i} className={`card card-glow p-8 lg:p-10 group in-view in-view-delay-${(i % 2) + 1} ${isVisible ? 'visible' : ''}`}>
+              <div key={i} className={`card card-glow p-8 lg:p-10 text-center group in-view in-view-delay-${(i % 2) + 1} ${isVisible ? 'visible' : ''}`}>
                 {/* Top bar with icon and badge */}
-                <div className="flex items-start justify-between mb-8">
+                <div className="flex flex-col items-center gap-4 mb-8">
                   <div className="w-14 h-14 rounded-2xl bg-white/[0.04] border border-white/[0.06] flex items-center justify-center group-hover:border-primary/20 transition-colors">
                     <Icon className="text-primary" size={24} />
                   </div>
@@ -46,7 +46,7 @@ export default function Bots({ dict }: BotsProps) {
                 <p className="text-gray-400 text-[15px] leading-relaxed mb-8 font-light">{bot.desc}</p>
 
                 {/* Features */}
-                <div className="space-y-3 mb-8">
+                <div className="space-y-3 mb-8 inline-block text-left">
                   {bot.features?.map((feature: string, fi: number) => (
                     <div key={fi} className="flex items-start gap-3">
                       <svg className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -58,10 +58,12 @@ export default function Bots({ dict }: BotsProps) {
                 </div>
 
                 {/* Link */}
-                <a href="#pricing" className="inline-flex items-center gap-2 text-primary text-sm font-semibold group-hover:gap-3 transition-all">
-                  {bot.cta}
-                  <span className="transition-transform group-hover:translate-x-1">→</span>
-                </a>
+                <div>
+                  <a href="#pricing" className="inline-flex items-center gap-2 text-primary text-sm font-semibold group-hover:gap-3 transition-all">
+                    {bot.cta}
+                    <span className="transition-transform group-hover:translate-x-1">→</span>
+                  </a>
+                </div>
               </div>
             );
           })}

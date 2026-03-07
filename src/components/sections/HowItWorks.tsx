@@ -28,14 +28,14 @@ export default function HowItWorks({ dict }: HowItWorksProps) {
           {steps.map((step, i) => {
             const Icon = icons[i];
             return (
-              <div key={i} className={`card card-glow p-8 lg:p-10 group in-view in-view-delay-${i + 1} ${isVisible ? 'visible' : ''}`}>
-                <div className="flex items-center gap-3 mb-6">
+              <div key={i} className={`card card-glow p-8 lg:p-10 text-center group in-view in-view-delay-${i + 1} ${isVisible ? 'visible' : ''}`}>
+                <div className="flex items-center justify-center gap-3 mb-6">
                   <span className="text-2xl font-heading font-bold gradient-text-green">{step.num}</span>
                   <span className="text-[11px] font-mono font-semibold text-primary tracking-[0.15em] uppercase">{step.label}</span>
                 </div>
                 <h3 className="text-xl font-heading font-bold text-white mb-4">{step.title}</h3>
                 <p className="text-gray-400 text-[15px] leading-relaxed font-light">{step.desc}</p>
-                <div className="mt-6 text-primary/40 group-hover:text-primary/60 transition-colors">
+                <div className="mt-6 flex justify-center text-primary/40 group-hover:text-primary/60 transition-colors">
                   <ArrowRight size={20} />
                 </div>
               </div>
