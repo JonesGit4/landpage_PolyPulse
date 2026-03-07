@@ -6,7 +6,17 @@ interface ContainerProps {
 
 export default function Container({ children, className = '', narrow = false }: ContainerProps) {
   return (
-    <div className={`w-full mx-auto px-6 sm:px-10 lg:px-16 xl:px-20 ${narrow ? 'max-w-3xl' : 'max-w-[1080px]'} ${className}`}>
+    <div
+      className={className}
+      style={{
+        maxWidth: narrow ? '768px' : '1080px',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        paddingLeft: 'clamp(1.5rem, 5vw, 5rem)',
+        paddingRight: 'clamp(1.5rem, 5vw, 5rem)',
+        width: '100%',
+      }}
+    >
       {children}
     </div>
   );
