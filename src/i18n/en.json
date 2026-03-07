@@ -5,7 +5,7 @@
     "performance": "Performance",
     "pricing": "Pricing",
     "faq": "FAQ",
-    "getStarted": "Get Started Free",
+    "getStarted": "Get Started",
     "language": "Language"
   },
   "hero": {
@@ -23,27 +23,62 @@
       "winrateLabel": "Win Rate",
       "uptime": "99.9%",
       "uptimeLabel": "Uptime"
+    },
+    "terminal": {
+      "title": "PolyPulse Terminal",
+      "trades": [
+        { "time": "15:42:03", "action": "BUY", "market": "Will BTC hit $100K by June?", "odds": "67%", "amount": "$2,450" },
+        { "time": "15:41:58", "action": "SELL", "market": "NBA Champion 2026 — OKC Thunder", "odds": "35%", "amount": "$1,200" },
+        { "time": "15:41:45", "action": "BUY", "market": "Next Iran Supreme Leader", "odds": "56%", "amount": "$3,100" },
+        { "time": "15:41:32", "action": "BUY", "market": "Dem Nominee 2028 — Newsom", "odds": "25%", "amount": "$890" },
+        { "time": "15:41:21", "action": "ALERT", "market": "Whale detected: $45K position opened", "odds": "—", "amount": "⚡" }
+      ]
     }
   },
   "howItWorks": {
     "title": "How It Works",
     "subtitle": "Start trading in 3 simple steps",
-    "step1": { "title": "Choose", "desc": "Pick your bot or plan based on your trading style and goals." },
-    "step2": { "title": "Configure", "desc": "Set up in under 2 minutes. Connect your wallet and customize alerts." },
-    "step3": { "title": "Profit", "desc": "Receive signals and trade 24/7 — fully automated, always on." }
+    "step1": {
+      "title": "Choose Your Bot",
+      "desc": "Pick your bot or plan based on your trading style and risk appetite."
+    },
+    "step2": {
+      "title": "Configure & Connect",
+      "desc": "Set up in under 2 minutes. Connect your wallet and customize your alerts."
+    },
+    "step3": {
+      "title": "Profit Automatically",
+      "desc": "Receive signals and trade 24/7 — fully automated, always on."
+    }
   },
   "bots": {
     "title": "Our Bots",
     "subtitle": "Powerful tools for every trading strategy",
-    "scalper": { "name": "Scalper Bot", "desc": "Lightning-fast trades on short-term market movements. Ideal for quick profits.", "badge": "+32% ROI" },
-    "swing": { "name": "Swing Bot", "desc": "Captures medium-term trends with smart entry and exit points.", "badge": "+58% ROI" },
-    "alerts": { "name": "Alert Bot", "desc": "Real-time notifications for whale moves, odds shifts, and new markets.", "badge": "24/7" },
-    "signals": { "name": "VIP Signals", "desc": "Curated high-conviction picks from our AI models and analyst team.", "badge": "Premium" },
-    "learnMore": "Learn More"
+    "scalper": {
+      "name": "Scalper Bot",
+      "desc": "Lightning-fast trades on short-term market movements. Ideal for quick, consistent profits.",
+      "badge": "+32% ROI"
+    },
+    "swing": {
+      "name": "Swing Bot",
+      "desc": "Captures medium-term trends with smart entry and exit points for larger moves.",
+      "badge": "+58% ROI"
+    },
+    "alerts": {
+      "name": "Alert Bot",
+      "desc": "Real-time notifications for whale moves, odds shifts, and new market openings.",
+      "badge": "24/7"
+    },
+    "signals": {
+      "name": "VIP Signals",
+      "desc": "Curated high-conviction picks from our AI models and analyst team.",
+      "badge": "Premium"
+    },
+    "learnMore": "Learn more"
   },
   "performance": {
     "title": "Live Performance",
-    "subtitle": "Real results, real-time data",
+    "subtitle": "Real results, real-time data — verified on-chain",
     "winRate": "Win Rate",
     "totalTrades": "Total Trades",
     "avgROI": "Avg. ROI",
@@ -56,96 +91,148 @@
     "pnl": "P&L"
   },
   "telegram": {
-    "title": "Trade on Telegram",
-    "subtitle": "All the power, right in your pocket",
-    "feature1": "Real-time signals with entry/exit",
-    "feature2": "Copy trade top performers",
-    "feature3": "Portfolio tracking & P&L",
+    "title": "Real-Time Signals on Telegram",
+    "subtitle": "Get instant alerts, whale tracking, and trade signals delivered directly to your Telegram — never miss a move.",
+    "feature1": "Instant trade signals with entry, target & stop",
+    "feature2": "Whale alerts — track smart money in real time",
+    "feature3": "Performance reports delivered daily",
     "joinChannel": "Join Free Channel"
   },
   "testimonials": {
     "title": "Trusted by Traders",
-    "subtitle": "What our community says",
-    "t1": { "name": "Alex M.", "role": "Crypto Trader", "text": "PolyPulse signals are incredibly accurate. Made back my subscription in the first week." },
-    "t2": { "name": "Sarah K.", "role": "DeFi Investor", "text": "The Scalper Bot runs 24/7 and I just check profits. Game changer." },
-    "t3": { "name": "Carlos R.", "role": "Prediction Markets Pro", "text": "Best Polymarket tool I've used. The Telegram integration is seamless." }
+    "subtitle": "See what our community says",
+    "t1": {
+      "text": "PolyPulse completely changed how I trade Polymarket. The Scalper Bot alone paid for my subscription in 3 days.",
+      "name": "Alex R.",
+      "role": "Day Trader"
+    },
+    "t2": {
+      "text": "The whale alerts are insane — I caught two 5x moves just by following the smart money signals last month.",
+      "name": "Sarah M.",
+      "role": "Crypto Investor"
+    },
+    "t3": {
+      "text": "I tested 5 other tools before PolyPulse. Nothing comes close to their signal accuracy and speed.",
+      "name": "David K.",
+      "role": "Quant Analyst"
+    }
   },
   "pricing": {
     "title": "Choose Your Plan",
-    "subtitle": "Start free, scale when ready",
+    "subtitle": "Start free. Upgrade when you're ready.",
     "monthly": "Monthly",
     "annual": "Annual",
-    "annualSave": "Save 20%",
+    "annualSave": "−20%",
     "currency": "USD",
     "currencySymbol": "$",
     "free": {
       "name": "Free",
+      "desc": "Get started with basic signals",
       "price": "0",
       "period": "/mo",
-      "desc": "Get started with basics",
-      "features": ["Public channel access", "1 signal/day", "Community group", "Market overview"],
-      "cta": "Start Free"
+      "features": [
+        "3 signals per day",
+        "Basic market alerts",
+        "Community Telegram access",
+        "Email support"
+      ],
+      "cta": "Get Started"
     },
     "pro": {
       "name": "Pro",
+      "desc": "For active traders",
       "price": "49",
       "period": "/mo",
-      "desc": "For active traders",
-      "features": ["Everything in Free", "5 signals/day", "1 bot included", "VIP group access", "12h support", "Performance dashboard"],
-      "cta": "Go Pro",
-      "popular": true
+      "popular": true,
+      "features": [
+        "Unlimited signals",
+        "Scalper Bot access",
+        "Whale alerts",
+        "Priority Telegram channel",
+        "Advanced analytics dashboard",
+        "Priority support"
+      ],
+      "cta": "Start Pro"
     },
     "premium": {
       "name": "Premium",
-      "price": "99",
-      "period": "/mo",
       "desc": "Maximum performance",
-      "features": ["Everything in Pro", "Unlimited signals", "3 bots included", "Priority 24/7 support", "Custom alerts", "Advanced analytics"],
-      "cta": "Go Premium"
-    },
-    "vip": {
-      "name": "VIP",
-      "price": "159",
+      "price": "149",
       "period": "/mo",
-      "desc": "Full arsenal",
-      "features": ["Everything in Premium", "All bots included", "1:1 configuration", "Custom bot development", "Dedicated account manager", "Early access to new features"],
-      "cta": "Go VIP"
+      "features": [
+        "Everything in Pro",
+        "All Bots (Scalper + Swing)",
+        "VIP Signals channel",
+        "API access",
+        "Custom alert rules",
+        "1-on-1 onboarding call"
+      ],
+      "cta": "Go Premium"
     },
     "elite": {
       "name": "Elite",
+      "desc": "White-glove service for serious capital",
       "price": "Custom",
       "period": "",
-      "desc": "Enterprise & custom solutions",
-      "features": ["Everything in VIP", "Custom bot development", "API access", "White-label options", "Dedicated infrastructure", "SLA guarantee"],
-      "cta": "Contact Us"
+      "features": [
+        "Everything in Premium",
+        "Dedicated account manager",
+        "Custom bot strategies",
+        "Private signal group (max 20 traders)",
+        "Direct line to our quant team",
+        "SLA-backed uptime guarantee"
+      ],
+      "cta": "Contact Sales"
     },
-    "acceptedPayments": "Accepted payments",
-    "guarantee": "7-day money-back guarantee"
+    "acceptedPayments": "Accepted Payments",
+    "guarantee": "7-day money-back guarantee — no questions asked"
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "q1": { "q": "What is PolyPulse?", "a": "PolyPulse is a platform offering intelligent trading bots, signals, and alerts for Polymarket prediction markets. Our tools help you trade smarter, 24/7." },
-    "q2": { "q": "Do I need trading experience?", "a": "No! Our bots handle the trading for you. The Free tier lets you learn with signals before committing. We also have tutorials on YouTube." },
-    "q3": { "q": "How do the bots work?", "a": "Our bots connect to Polymarket via API, analyzing markets in real-time. They execute trades based on proven strategies — scalping, swing trading, or signal-based." },
-    "q4": { "q": "Is my money safe?", "a": "Yes. We never hold your funds. Bots operate with your own wallet keys. Self-custody always." },
-    "q5": { "q": "Can I cancel anytime?", "a": "Absolutely. Cancel anytime with no penalties. We also offer a 7-day money-back guarantee on all paid plans." },
-    "q6": { "q": "What platforms do you support?", "a": "Currently Polymarket. Kalshi and DraftKings Predictions support coming soon." }
+    "q1": {
+      "q": "What is PolyPulse?",
+      "a": "PolyPulse is a suite of intelligent trading bots and signal tools designed specifically for Polymarket prediction markets. We help you trade smarter with automated strategies, real-time alerts, and data-driven insights."
+    },
+    "q2": {
+      "q": "Do I need trading experience?",
+      "a": "Not at all. Our bots do the heavy lifting. You choose a plan, connect your wallet, and the bot handles entries, exits, and risk management. We also provide educational resources to get you started."
+    },
+    "q3": {
+      "q": "How are the signals generated?",
+      "a": "We use a combination of on-chain data analysis, market sentiment tracking, whale wallet monitoring, and proprietary AI models to generate high-confidence trading signals."
+    },
+    "q4": {
+      "q": "Is my money safe?",
+      "a": "We never hold your funds. Our bots operate via API keys with trade-only permissions. You maintain full custody of your assets at all times."
+    },
+    "q5": {
+      "q": "Can I cancel anytime?",
+      "a": "Yes. All plans are month-to-month with no lock-in. You can cancel anytime from your dashboard and your access continues until the end of the billing period."
+    },
+    "q6": {
+      "q": "What support is available?",
+      "a": "Free users get community support via Telegram. Pro and above get priority support with typical response times under 2 hours. Elite members have a dedicated account manager."
+    }
+  },
+  "cta": {
+    "title": "Ready to Trade Smarter?",
+    "subtitle": "Join 500+ traders using PolyPulse to automate their Polymarket strategies.",
+    "cta": "Start Free — No Card Required"
   },
   "footer": {
-    "tagline": "Intelligent bots for prediction markets.",
+    "tagline": "Intelligent trading bots for Polymarket prediction markets.",
     "product": "Product",
     "resources": "Resources",
-    "legal": "Legal",
-    "newsletter": "Get free signals by email",
-    "emailPlaceholder": "your@email.com",
-    "subscribe": "Subscribe",
-    "terms": "Terms of Service",
-    "privacy": "Privacy Policy",
-    "disclaimer": "Disclaimer",
     "docs": "Documentation",
     "blog": "Blog",
     "tutorials": "Tutorials",
+    "newsletter": "Stay Updated",
+    "emailPlaceholder": "your@email.com",
+    "subscribe": "Subscribe",
     "copyright": "© 2026 PolyPulse. All rights reserved.",
-    "risk": "Trading involves risk. Past performance does not guarantee future results."
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "disclaimer": "Disclaimer",
+    "risk": "Trading prediction markets involves risk. Past performance does not guarantee future results. Only trade with capital you can afford to lose."
   }
 }

@@ -1,53 +1,88 @@
 {
   "nav": {
-    "features": "Funciones",
+    "features": "Funcionalidades",
     "bots": "Bots",
     "performance": "Rendimiento",
-    "pricing": "Precios",
+    "pricing": "Planes",
     "faq": "FAQ",
-    "getStarted": "Comenzar Gratis",
+    "getStarted": "Empezar",
     "language": "Idioma"
   },
   "hero": {
     "badge": "500+ Traders Activos",
-    "headline": "Bots inteligentes para",
+    "headline": "Bots Inteligentes para",
     "headlineHighlight": "Polymarket",
-    "subheadline": "Gana en piloto automático.",
+    "subheadline": "Ganancias en piloto automático.",
     "description": "Señales automatizadas, alertas y bots de trading — operando 24/7 para que tú no tengas que hacerlo.",
-    "cta1": "Comenzar Gratis",
+    "cta1": "Empezar Gratis",
     "cta2": "Ver Planes",
     "stats": {
       "volume": "$2M+",
       "volumeLabel": "Volumen Operado",
       "winrate": "89%",
-      "winrateLabel": "Tasa de Acierto",
+      "winrateLabel": "Tasa de Éxito",
       "uptime": "99.9%",
       "uptimeLabel": "Uptime"
+    },
+    "terminal": {
+      "title": "Terminal PolyPulse",
+      "trades": [
+        { "time": "15:42:03", "action": "COMPRA", "market": "¿BTC superará $100K en junio?", "odds": "67%", "amount": "$2,450" },
+        { "time": "15:41:58", "action": "VENTA", "market": "Campeón NBA 2026 — OKC Thunder", "odds": "35%", "amount": "$1,200" },
+        { "time": "15:41:45", "action": "COMPRA", "market": "Próximo Líder Supremo de Irán", "odds": "56%", "amount": "$3,100" },
+        { "time": "15:41:32", "action": "COMPRA", "market": "Nominado Dem 2028 — Newsom", "odds": "25%", "amount": "$890" },
+        { "time": "15:41:21", "action": "ALERTA", "market": "Ballena detectada: posición de $45K", "odds": "—", "amount": "⚡" }
+      ]
     }
   },
   "howItWorks": {
     "title": "Cómo Funciona",
     "subtitle": "Empieza a operar en 3 simples pasos",
-    "step1": { "title": "Elige", "desc": "Selecciona tu bot o plan según tu estilo de trading y objetivos." },
-    "step2": { "title": "Configura", "desc": "Configura en menos de 2 minutos. Conecta tu wallet y personaliza alertas." },
-    "step3": { "title": "Gana", "desc": "Recibe señales y opera 24/7 — totalmente automatizado, siempre activo." }
+    "step1": {
+      "title": "Elige Tu Bot",
+      "desc": "Selecciona tu bot o plan según tu estilo de trading y apetito de riesgo."
+    },
+    "step2": {
+      "title": "Configura y Conecta",
+      "desc": "Configúralo en menos de 2 minutos. Conecta tu wallet y personaliza tus alertas."
+    },
+    "step3": {
+      "title": "Gana Automáticamente",
+      "desc": "Recibe señales y opera 24/7 — totalmente automatizado, siempre activo."
+    }
   },
   "bots": {
     "title": "Nuestros Bots",
     "subtitle": "Herramientas poderosas para cada estrategia",
-    "scalper": { "name": "Bot Scalper", "desc": "Operaciones ultrarrápidas en movimientos a corto plazo. Ideal para ganancias rápidas.", "badge": "+32% ROI" },
-    "swing": { "name": "Bot Swing", "desc": "Captura tendencias a mediano plazo con puntos de entrada y salida inteligentes.", "badge": "+58% ROI" },
-    "alerts": { "name": "Bot Alertas", "desc": "Notificaciones en tiempo real de movimientos de ballenas, cambios de odds y nuevos mercados.", "badge": "24/7" },
-    "signals": { "name": "Señales VIP", "desc": "Selecciones de alta convicción de nuestros modelos de IA y equipo de analistas.", "badge": "Premium" },
-    "learnMore": "Saber Más"
+    "scalper": {
+      "name": "Scalper Bot",
+      "desc": "Operaciones ultrarrápidas en movimientos a corto plazo. Ideal para ganancias rápidas y consistentes.",
+      "badge": "+32% ROI"
+    },
+    "swing": {
+      "name": "Swing Bot",
+      "desc": "Captura tendencias a medio plazo con puntos de entrada y salida inteligentes.",
+      "badge": "+58% ROI"
+    },
+    "alerts": {
+      "name": "Alert Bot",
+      "desc": "Notificaciones en tiempo real de movimientos de ballenas, cambios de cuotas y nuevos mercados.",
+      "badge": "24/7"
+    },
+    "signals": {
+      "name": "Señales VIP",
+      "desc": "Selecciones de alta convicción curadas por nuestros modelos de IA y equipo de analistas.",
+      "badge": "Premium"
+    },
+    "learnMore": "Saber más"
   },
   "performance": {
     "title": "Rendimiento en Vivo",
-    "subtitle": "Resultados reales, datos en tiempo real",
-    "winRate": "Tasa de Acierto",
+    "subtitle": "Resultados reales, datos en tiempo real — verificados on-chain",
+    "winRate": "Tasa de Éxito",
     "totalTrades": "Total Operaciones",
     "avgROI": "ROI Promedio",
-    "profitFactor": "Factor de Beneficio",
+    "profitFactor": "Factor de Ganancia",
     "recentTrades": "Operaciones Recientes",
     "market": "Mercado",
     "direction": "Dirección",
@@ -56,96 +91,148 @@
     "pnl": "P&L"
   },
   "telegram": {
-    "title": "Opera desde Telegram",
-    "subtitle": "Todo el poder, directo en tu bolsillo",
-    "feature1": "Señales en tiempo real con entrada/salida",
-    "feature2": "Copia a los mejores traders",
-    "feature3": "Seguimiento de portafolio y P&L",
+    "title": "Señales en Tiempo Real en Telegram",
+    "subtitle": "Recibe alertas instantáneas, seguimiento de ballenas y señales de trading directamente en tu Telegram — no te pierdas ningún movimiento.",
+    "feature1": "Señales instantáneas con entrada, objetivo y stop",
+    "feature2": "Alertas de ballenas — rastrea el dinero inteligente en tiempo real",
+    "feature3": "Reportes de rendimiento entregados diariamente",
     "joinChannel": "Unirse al Canal Gratis"
   },
   "testimonials": {
-    "title": "Confiado por Traders",
+    "title": "Confianza de los Traders",
     "subtitle": "Lo que dice nuestra comunidad",
-    "t1": { "name": "Alex M.", "role": "Trader Crypto", "text": "Las señales de PolyPulse son increíblemente precisas. Recuperé mi suscripción en la primera semana." },
-    "t2": { "name": "Sarah K.", "role": "Inversionista DeFi", "text": "El Bot Scalper opera 24/7 y yo solo reviso las ganancias. Un cambio total." },
-    "t3": { "name": "Carlos R.", "role": "Pro en Prediction Markets", "text": "La mejor herramienta de Polymarket que he usado. La integración con Telegram es perfecta." }
+    "t1": {
+      "text": "PolyPulse cambió completamente cómo opero en Polymarket. Solo el Scalper Bot pagó mi suscripción en 3 días.",
+      "name": "Alex R.",
+      "role": "Day Trader"
+    },
+    "t2": {
+      "text": "Las alertas de ballenas son increíbles — atrapé dos movimientos de 5x solo siguiendo las señales de dinero inteligente el mes pasado.",
+      "name": "Sarah M.",
+      "role": "Inversora Crypto"
+    },
+    "t3": {
+      "text": "Probé 5 herramientas antes de PolyPulse. Ninguna se acerca a su precisión y velocidad de señales.",
+      "name": "David K.",
+      "role": "Analista Cuantitativo"
+    }
   },
   "pricing": {
     "title": "Elige Tu Plan",
-    "subtitle": "Comienza gratis, escala cuando estés listo",
+    "subtitle": "Empieza gratis. Mejora cuando estés listo.",
     "monthly": "Mensual",
     "annual": "Anual",
-    "annualSave": "Ahorra 20%",
+    "annualSave": "−20%",
     "currency": "USD",
     "currencySymbol": "$",
     "free": {
       "name": "Free",
+      "desc": "Empieza con señales básicas",
       "price": "0",
       "period": "/mes",
-      "desc": "Comienza con lo básico",
-      "features": ["Acceso al canal público", "1 señal/día", "Grupo comunitario", "Resumen de mercado"],
-      "cta": "Comenzar Gratis"
+      "features": [
+        "3 señales por día",
+        "Alertas básicas de mercado",
+        "Acceso a Telegram comunitario",
+        "Soporte por email"
+      ],
+      "cta": "Empezar"
     },
     "pro": {
       "name": "Pro",
+      "desc": "Para traders activos",
       "price": "49",
       "period": "/mes",
-      "desc": "Para traders activos",
-      "features": ["Todo del Free", "5 señales/día", "1 bot incluido", "Acceso grupo VIP", "Soporte 12h", "Dashboard de rendimiento"],
-      "cta": "Ir Pro",
-      "popular": true
+      "popular": true,
+      "features": [
+        "Señales ilimitadas",
+        "Acceso al Scalper Bot",
+        "Alertas de ballenas",
+        "Canal prioritario de Telegram",
+        "Panel de análisis avanzado",
+        "Soporte prioritario"
+      ],
+      "cta": "Empezar Pro"
     },
     "premium": {
       "name": "Premium",
-      "price": "99",
+      "desc": "Rendimiento máximo",
+      "price": "149",
       "period": "/mes",
-      "desc": "Máximo rendimiento",
-      "features": ["Todo del Pro", "Señales ilimitadas", "3 bots incluidos", "Soporte 24/7 prioritario", "Alertas personalizadas", "Analítica avanzada"],
+      "features": [
+        "Todo lo del Pro",
+        "Todos los Bots (Scalper + Swing)",
+        "Canal de Señales VIP",
+        "Acceso a API",
+        "Reglas de alerta personalizadas",
+        "Llamada de onboarding 1-a-1"
+      ],
       "cta": "Ir Premium"
-    },
-    "vip": {
-      "name": "VIP",
-      "price": "159",
-      "period": "/mes",
-      "desc": "Arsenal completo",
-      "features": ["Todo del Premium", "Todos los bots incluidos", "Configuración 1:1", "Desarrollo de bot custom", "Account manager dedicado", "Acceso anticipado a nuevas funciones"],
-      "cta": "Ir VIP"
     },
     "elite": {
       "name": "Elite",
+      "desc": "Servicio exclusivo para capital serio",
       "price": "Custom",
       "period": "",
-      "desc": "Soluciones empresariales",
-      "features": ["Todo del VIP", "Desarrollo de bot a medida", "Acceso API", "Opciones white-label", "Infraestructura dedicada", "Garantía SLA"],
-      "cta": "Contactar"
+      "features": [
+        "Todo lo del Premium",
+        "Gestor de cuenta dedicado",
+        "Estrategias de bot personalizadas",
+        "Grupo privado de señales (máx 20 traders)",
+        "Línea directa con nuestro equipo cuantitativo",
+        "Garantía de uptime con SLA"
+      ],
+      "cta": "Contactar Ventas"
     },
-    "acceptedPayments": "Métodos de pago aceptados",
-    "guarantee": "Garantía de devolución de 7 días"
+    "acceptedPayments": "Métodos de Pago",
+    "guarantee": "Garantía de devolución de 7 días — sin preguntas"
   },
   "faq": {
     "title": "Preguntas Frecuentes",
-    "q1": { "q": "¿Qué es PolyPulse?", "a": "PolyPulse es una plataforma que ofrece bots de trading inteligentes, señales y alertas para mercados de predicción en Polymarket. Nuestras herramientas te ayudan a operar mejor, 24/7." },
-    "q2": { "q": "¿Necesito experiencia en trading?", "a": "¡No! Nuestros bots manejan el trading por ti. El plan Free te permite aprender con señales antes de comprometerte. También tenemos tutoriales en YouTube." },
-    "q3": { "q": "¿Cómo funcionan los bots?", "a": "Nuestros bots se conectan a Polymarket vía API, analizando mercados en tiempo real. Ejecutan operaciones basadas en estrategias probadas — scalping, swing trading o señales." },
-    "q4": { "q": "¿Mi dinero está seguro?", "a": "Sí. Nunca custodiamos tus fondos. Los bots operan con tus propias claves de wallet. Siempre auto-custodia." },
-    "q5": { "q": "¿Puedo cancelar cuando quiera?", "a": "Por supuesto. Cancela cuando quieras sin penalidades. También ofrecemos garantía de devolución de 7 días en todos los planes pagos." },
-    "q6": { "q": "¿Qué plataformas soportan?", "a": "Actualmente Polymarket. Soporte para Kalshi y DraftKings Predictions próximamente." }
+    "q1": {
+      "q": "¿Qué es PolyPulse?",
+      "a": "PolyPulse es un conjunto de bots de trading inteligentes y herramientas de señales diseñadas específicamente para los mercados de predicción de Polymarket. Te ayudamos a operar de forma más inteligente con estrategias automatizadas, alertas en tiempo real e insights basados en datos."
+    },
+    "q2": {
+      "q": "¿Necesito experiencia en trading?",
+      "a": "Para nada. Nuestros bots hacen el trabajo pesado. Tú eliges un plan, conectas tu wallet y el bot gestiona entradas, salidas y riesgo. También ofrecemos recursos educativos para empezar."
+    },
+    "q3": {
+      "q": "¿Cómo se generan las señales?",
+      "a": "Usamos una combinación de análisis de datos on-chain, seguimiento de sentimiento de mercado, monitoreo de wallets de ballenas y modelos de IA propietarios para generar señales de trading de alta confianza."
+    },
+    "q4": {
+      "q": "¿Mi dinero está seguro?",
+      "a": "Nunca custodiamos tus fondos. Nuestros bots operan mediante claves API con permisos solo de trading. Tú mantienes la custodia completa de tus activos en todo momento."
+    },
+    "q5": {
+      "q": "¿Puedo cancelar en cualquier momento?",
+      "a": "Sí. Todos los planes son mensuales sin compromiso. Puedes cancelar en cualquier momento desde tu panel y tu acceso continúa hasta el final del período de facturación."
+    },
+    "q6": {
+      "q": "¿Qué soporte hay disponible?",
+      "a": "Los usuarios gratuitos tienen soporte comunitario vía Telegram. Pro y superiores tienen soporte prioritario con tiempos de respuesta típicos de menos de 2 horas. Los miembros Elite tienen un gestor de cuenta dedicado."
+    }
+  },
+  "cta": {
+    "title": "¿Listo para Operar Mejor?",
+    "subtitle": "Únete a 500+ traders usando PolyPulse para automatizar sus estrategias en Polymarket.",
+    "cta": "Empezar Gratis — Sin Tarjeta"
   },
   "footer": {
-    "tagline": "Bots inteligentes para mercados de predicción.",
+    "tagline": "Bots de trading inteligentes para mercados de predicción Polymarket.",
     "product": "Producto",
     "resources": "Recursos",
-    "legal": "Legal",
-    "newsletter": "Recibe señales gratis por email",
-    "emailPlaceholder": "tu@email.com",
-    "subscribe": "Suscribirse",
-    "terms": "Términos de Servicio",
-    "privacy": "Política de Privacidad",
-    "disclaimer": "Aviso Legal",
     "docs": "Documentación",
     "blog": "Blog",
     "tutorials": "Tutoriales",
+    "newsletter": "Mantente Actualizado",
+    "emailPlaceholder": "tu@email.com",
+    "subscribe": "Suscribirse",
     "copyright": "© 2026 PolyPulse. Todos los derechos reservados.",
-    "risk": "El trading conlleva riesgo. El rendimiento pasado no garantiza resultados futuros."
+    "terms": "Términos",
+    "privacy": "Privacidad",
+    "disclaimer": "Aviso Legal",
+    "risk": "Operar en mercados de predicción implica riesgo. Los resultados pasados no garantizan resultados futuros. Opera solo con capital que puedas permitirte perder."
   }
 }

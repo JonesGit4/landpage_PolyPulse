@@ -2,15 +2,15 @@ import { NextRequest, NextResponse } from 'next/server';
 import { locales, defaultLocale, Locale } from './i18n';
 
 function getLocaleFromHeaders(request: NextRequest): Locale {
-  // Check for Brazil DNS/geo (via Vercel headers)
-  const country = request.geo?.country || request.headers.get('x-vercel-ip-country') || '';
+  // Check for Brazil geo via Vercel headers
+  const country = request.headers.get('x-vercel-ip-country') || '';
   if (country === 'BR') return 'pt-br';
 
   // Check Accept-Language header
   const acceptLang = request.headers.get('accept-language') || '';
   if (acceptLang.includes('pt-BR') || acceptLang.includes('pt')) return 'pt-br';
   if (acceptLang.includes('es')) return 'es';
-  
+
   return defaultLocale;
 }
 

@@ -8,20 +8,33 @@ export async function generateStaticParams() {
 
 export const metadata: Metadata = {
   title: 'PolyPulse — Intelligent Bots for Polymarket',
-  description: 'Automated signals, alerts, and trading bots for Polymarket prediction markets. Trade smarter, 24/7.',
-  icons: { icon: '/images/favicon.ico' },
+  description: 'Automated signals, alerts, and trading bots for Polymarket prediction markets. Trade smarter with AI-powered tools, 24/7.',
+  openGraph: {
+    title: 'PolyPulse — Intelligent Bots for Polymarket',
+    description: 'Automated signals, alerts, and trading bots for Polymarket. Trade smarter, 24/7.',
+    type: 'website',
+    siteName: 'PolyPulse',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PolyPulse — Intelligent Bots for Polymarket',
+    description: 'Automated signals, alerts, and trading bots for Polymarket. Trade smarter, 24/7.',
+  },
 };
 
-export default function LocaleLayout({
+export default async function LocaleLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: Locale };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale: rawLocale } = await params;
+  const locale = rawLocale as Locale;
+
   return (
-    <html lang={params.locale} className="dark">
-      <body className="bg-dark-900 text-gray-200 antialiased">
+    <html lang={locale} className="dark">
+      <body className="bg-dark-950 text-gray-300 antialiased">
         {children}
       </body>
     </html>
