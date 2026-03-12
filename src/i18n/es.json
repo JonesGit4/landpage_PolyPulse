@@ -292,5 +292,19 @@
     "disclaimer": "Aviso Legal",
     "risk": "Operar en mercados de predicción implica riesgo. Los resultados pasados no garantizan resultados futuros. Opera solo con capital que puedas permitirte perder.",
     "faq": "FAQ"
+  },
+  "waitingList": {
+    "badge": "MUY PRONTO",
+    "title": "Estamos por lanzar",
+    "subtitle": "Sé el primero en acceder a los bots y señales de PolyPulse. Únete a la lista de espera.",
+    "namePlaceholder": "Tu nombre",
+    "emailPlaceholder": "Tu mejor email",
+    "whatsappPlaceholder": "WhatsApp (obligatorio)",
+    "cta": "Unirme a la Lista",
+    "sending": "Enviando...",
+    "success": "¡Estás en la lista! 🚀",
+    "successSub": "Te contactaremos pronto.",
+    "error": "Algo salió mal. Intenta de nuevo.",
+    "spots": "Cupos limitados"
   }
 }

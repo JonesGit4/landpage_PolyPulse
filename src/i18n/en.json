@@ -292,5 +292,19 @@
     "disclaimer": "Disclaimer",
     "risk": "Trading prediction markets involves risk. Past performance does not guarantee future results. Only trade with capital you can afford to lose.",
     "faq": "FAQ"
+  },
+  "waitingList": {
+    "badge": "COMING SOON",
+    "title": "We're launching soon",
+    "subtitle": "Be the first to access PolyPulse bots and signals. Join the waiting list.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Your best email",
+    "whatsappPlaceholder": "WhatsApp (required)",
+    "cta": "Join Waiting List",
+    "sending": "Sending...",
+    "success": "You're on the list! 🚀",
+    "successSub": "We'll reach out soon.",
+    "error": "Something went wrong. Try again.",
+    "spots": "Limited spots available"
   }
 }
