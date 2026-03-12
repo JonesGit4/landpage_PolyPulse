@@ -49,8 +49,8 @@ export default function WaitingListOverlay({ dict }: Props) {
     <div style={{
       position: 'fixed', inset: 0, zIndex: 9999,
       display: 'flex', alignItems: 'center', justifyContent: 'center',
-      backdropFilter: 'blur(14px)', WebkitBackdropFilter: 'blur(14px)',
-      backgroundColor: 'rgba(8, 10, 18, 0.78)',
+      backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)',
+      backgroundColor: 'rgba(8, 10, 18, 0.55)',
     }}>
       {/* Grid pattern */}
       <div style={{
