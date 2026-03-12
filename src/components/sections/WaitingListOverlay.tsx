@@ -1,5 +1,6 @@
 'use client';
 import { useState, FormEvent } from 'react';
+import Image from 'next/image';
 
 interface Props { dict: any; }
 
@@ -75,7 +76,7 @@ export default function WaitingListOverlay({ dict }: Props) {
         {/* Logo */}
         <div style={{ marginBottom: 24 }}>
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: 10, marginBottom: 20 }}>
-            <div style={{ width: 36, height: 36, borderRadius: 10, background: 'linear-gradient(135deg, #00D4FF, #8B5CF6)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18 }}>⚡</div>
+            <Image src="/logo-sm.png" alt="PolyPulse" width={40} height={40} style={{ borderRadius: 10 }} />
             <span style={{ fontFamily: 'Sora, sans-serif', fontSize: 22, fontWeight: 700, color: '#fff' }}>
               Poly<span style={{ color: '#00D4FF' }}>Pulse</span>
             </span>

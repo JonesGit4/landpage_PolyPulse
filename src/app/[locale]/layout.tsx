@@ -9,6 +9,16 @@ export async function generateStaticParams() {
 export const metadata: Metadata = {
   title: 'PolyPulse — Intelligent Bots for Polymarket',
   description: 'Automated signals, alerts, and trading bots for Polymarket prediction markets. Trade smarter with AI-powered tools, 24/7.',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
   openGraph: {
     title: 'PolyPulse — Intelligent Bots for Polymarket',
     description: 'Automated signals, alerts, and trading bots for Polymarket. Trade smarter, 24/7.',
